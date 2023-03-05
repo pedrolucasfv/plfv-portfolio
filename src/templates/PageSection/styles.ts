@@ -43,3 +43,6 @@ export const Title = styled.h2`
     background-image: url('/img/background-interativo.gif');
   `}
 `
+
+export const Children = styled.div``
+export const Image = styled.div``

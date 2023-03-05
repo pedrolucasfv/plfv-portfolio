@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.main`
-  height: 95vh;
-`
+export const Wrapper = styled.main``
 
 export const Image = styled.div`
   background: url('/img/Logo.png');
@@ -20,10 +18,11 @@ export const Image = styled.div`
 export const Title = styled.h3`
   ${({ theme }) => css`
     margin-top: -3rem;
-    font-size: 6rem;
-    margin-left: ${theme.spacings.xsmall};
-    color: ${theme.colors.primary};
+    letter-spacing: 0.3rem;
 
+    font-size: 8.5rem;
+    margin-left: ${theme.spacings.xsmall};
+    color: ${theme.colors.white};
     ${media.lessThan('huge')`
     font-size: 4.5rem;
   `}
@@ -31,24 +30,44 @@ export const Title = styled.h3`
 `
 export const Description = styled.h3`
   ${({ theme }) => css`
-    font-size: 4rem;
-    color: ${theme.colors.primary};
+    font-size: 4.5rem;
+    color: ${theme.colors.white};
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
     margin-left: ${theme.spacings.xsmall};
+
     ${media.lessThan('huge')`
     font-size: 3rem;
   `}
   `}
 `
+export const Text = styled.h3`
+  ${({ theme }) => css`
+    margin-top: 10rem;
+    font-size: 12rem;
+    margin-left: ${theme.spacings.xsmall};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url('/img/background-interativo2.gif');
+    ${media.lessThan('huge')`
+    font-size: 3rem;
+  `}
+  `}
+`
+
 export const Content = styled.div`
   ${({ theme }) => css`
-    width: 85%;
-    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0.7rem;
+    right: 0.7rem;
+    bottom: 0.3rem;
     background: ${theme.gradients.darkBg};
     display: flex;
     align-items: center;
     flex-direction: column;
-    border-right: solid ${theme.colors.primary} 0.5rem;
-    border-bottom: solid ${theme.colors.primary} 0.5rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
+    clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
   `}
 `
 
@@ -63,62 +82,27 @@ export const Glass = styled.div`
   position: absolute;
   left: 0%;
   top: 0%;
-  bottom: 0%;
+  bottom: -1%;
   right: 0%;
   background: linear-gradient(
     45deg,
     #fff,
     rgba(7, 154, 207, 0.5) 20%,
     rgba(4, 77, 104, 0.5) 30%,
-    hsla(0, 0%, 100%, 0.5) 70%,
-    rgba(4, 77, 104, 0.5) 90%,
+    hsla(0, 0%, 100%, 0.5) 50%,
+    rgba(4, 77, 104, 0.5) 85%,
     #fff
   );
   z-index: -5;
 `
 
-export const BorderBanner = styled.div`
+export const BorderContent = styled.div`
   ${({ theme }) => css`
-    position: absolute;
-    top: 0%;
-    width: 90%;
-    height: 89vh;
-    background: ${theme.gradients.darkBg};
-    z-index: -4;
-    border-right: solid ${theme.colors.primary} 0.5rem;
-    border-bottom: solid ${theme.colors.primary} 0.5rem;
+    position: relative;
+    width: 100%;
+    height: 101vh;
+    background: ${theme.colors.primary};
+    -webkit-clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
+    clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
   `}
-`
-
-export const IntraBorder = styled.div`
-  ${({ theme }) => css`
-    position: absolute;
-    top: 0%;
-    width: 88%;
-    height: 85vh;
-    background: url('/img/background-interativo.gif');
-    background-position: center;
-    background-size: cover;
-    z-index: -3;
-    border-right: solid ${theme.colors.primary} 0.5rem;
-    border-bottom: solid ${theme.colors.primary} 0.5rem;
-  `}
-`
-export const GlassIntraBorder = styled.div`
-  position: absolute;
-  top: 0%;
-  width: calc(88% - 0.5rem);
-  height: calc(85vh - 0.5rem);
-  background-position: center;
-  background-size: cover;
-  background: linear-gradient(
-    45deg,
-    #fff,
-    rgba(7, 154, 207, 0.5) 9%,
-    rgba(4, 77, 104, 0.5) 50%,
-    hsla(0, 0%, 100%, 0.6) 70%,
-    rgba(4, 77, 104, 0.5) 90%,
-    #fff
-  );
-  z-index: -1;
 `

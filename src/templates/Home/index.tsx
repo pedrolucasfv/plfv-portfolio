@@ -6,7 +6,9 @@ import * as S from './styles'
 const Home = () => (
   <S.Wrapper>
     <Banner />
-    <Menu />
+    <S.Menu>
+      <Menu />
+    </S.Menu>
     <S.Background src="/img/background-interativo.gif" />
     <PageSection title="about me" />
   </S.Wrapper>

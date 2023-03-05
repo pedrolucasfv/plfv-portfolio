@@ -3,6 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.menu`
   ${({ theme }) => css`
+    z-index: 10;
     background: ${theme.gradients.darkBg};
     display: flex;
     align-items: center;
@@ -37,6 +38,9 @@ export const LogoTitle = styled.h3`
     font-size: ${theme.font.sizes.xlarge};
     color: ${theme.colors.primary};
     margin-left: ${theme.spacings.xsmall};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url('/img/background-interativo2.gif');
   `}
 `
 

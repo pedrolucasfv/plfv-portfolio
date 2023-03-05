@@ -2,6 +2,12 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.main``
 
+export const Menu = styled.div`
+  ${({ theme }) => css`
+    border-top: solid ${theme.colors.primary} 0.3rem;
+    margin-top: -0.3rem;
+  `}
+`
 type ImageProps = {
   src: string
 }
