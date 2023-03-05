@@ -9,7 +9,7 @@ export type ProjectCardProps = {
 const ProjectCard = ({ description, image, name }: ProjectCardProps) => (
   <S.Wrapper>
     <S.ImageContent>
-      <S.Image src={image} />
+      <S.Image src={image} aria-label="Project image" />
     </S.ImageContent>
     <S.InfoContent>
       <S.Name>{name}</S.Name>
