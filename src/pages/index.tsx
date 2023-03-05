@@ -1,5 +1,5 @@
-import ProjectCard from 'components/ProjectCard'
+import Home from 'templates/Home'
 
-export default function Home() {
-  return <ProjectCard />
+export default function HomePage() {
+  return <Home />
 }
