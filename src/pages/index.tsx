@@ -1,5 +1,5 @@
-import Main from 'components/Main'
+import ProjectCard from 'components/ProjectCard'
 
 export default function Home() {
-  return <Main />
+  return <ProjectCard />
 }
