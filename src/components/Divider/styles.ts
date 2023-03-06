@@ -13,17 +13,17 @@ export const Wrapper = styled.main`
 
 export const Glass = styled.div`
   position: absolute;
-  top: 0;
-  left: 2rem;
-  right: 2rem;
-  bottom: 3rem;
+  top: 0.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom: 4.5rem;
   background: linear-gradient(
     45deg,
     #fff,
     rgba(7, 154, 207, 0.5) 20%,
     rgba(4, 77, 104, 0.5) 30%,
-    hsla(0, 0%, 100%, 0.5) 60%,
-    rgba(4, 77, 104, 0.5) 75%,
+    hsla(0, 0%, 100%, 0.5) 50%,
+    rgba(4, 77, 104, 0.5) 85%,
     #fff
   );
   -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
@@ -33,13 +33,13 @@ export const Glass = styled.div`
 export const Background = styled.div`
   position: absolute;
 
-  top: 0;
-  left: 2rem;
-  right: 2rem;
-  bottom: 3rem;
+  top: 0.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  bottom: 4.5rem;
   background: url('/img/background-interativo.gif');
-  background-position: 100rem;
-  background-size: 140rem 96rem;
+  background-position: 85rem;
+  background-size: 120rem 96rem;
   z-index: -2;
   -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
   clip-path: polygon(50% 30%, 0 0, 100% 0);
@@ -48,7 +48,7 @@ export const BorderWindow = styled.div`
   ${({ theme }) => css`
     position: relative;
     width: 30rem;
-    height: 35rem;
+    height: 40rem;
     background: ${theme.colors.primary};
     background-position: center;
     background-size: cover;
@@ -65,6 +65,7 @@ export const LeftContent = styled.div`
     grid-row: 1;
     grid-column: 1;
     z-index: -5;
+    border-right: solid ${theme.colors.primary} 0.5rem;
   `}
 `
 export const RightContent = styled.div`

@@ -4,14 +4,14 @@ export const Wrapper = styled.main`
   ${({ theme }) => css`
     height: 40rem;
     width: 32rem;
-    background: ${theme.gradients.darkBg};
+    background: ${theme.gradients.top.darkBg};
     color: white;
     display: grid;
     border: solid 0.3rem ${theme.colors.primary};
     border-radius: 0.8rem;
     box-shadow: 0.5rem 0.5rem 0.6rem rgb(0 0 0 / 30%);
     :hover {
-      background: ${theme.gradients.blueBg};
+      background: ${theme.gradients.top.blueBg};
     }
   `}
 `

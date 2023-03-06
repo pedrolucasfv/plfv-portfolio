@@ -1,9 +1,13 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    width: 33rem;
-    background: ${theme.gradients.darkBg};
+    width: 40rem;
+    ${media.lessThan('huge')`
+    width: 35rem;
+  `}
+    background: ${theme.gradients.top.darkBg};
     color: white;
     display: grid;
     border: solid 0.3rem ${theme.colors.primary};
@@ -51,5 +55,36 @@ export const Item = styled.li`
     font-size: ${theme.font.sizes.small};
     color: ${theme.colors.white};
     margin: 1.7rem 0;
+  `}
+`
+
+export const Button = styled.a`
+  ${({ theme }) => css`
+    padding: 1rem 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: ${theme.font.sizes.xxlarge};
+    color: ${theme.colors.white};
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    background-image: url('/img/background-interativo.gif');
+    border: 0.2rem solid ${theme.colors.primary};
+    cursor: pointer;
+
+    &:hover {
+      font-weight: ${theme.font.bold};
+      color: ${theme.colors.white};
+      animation: go-back 0.4s both;
+      @keyframes go-back {
+        0% {
+          letter-spacing: normal;
+        }
+        100% {
+          letter-spacing: 1rem;
+        }
+      }
+    }
   `}
 `

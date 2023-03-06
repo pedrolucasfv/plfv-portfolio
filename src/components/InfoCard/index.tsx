@@ -3,7 +3,7 @@ import * as S from './styles'
 export type InfoCardProps = {
   icon: JSX.Element
   title: string
-  items: string[]
+  items?: string[]
 }
 
 const InfoCard = ({ icon, items, title }: InfoCardProps) => (
@@ -11,11 +11,15 @@ const InfoCard = ({ icon, items, title }: InfoCardProps) => (
     <S.Content>
       <S.Icon>{icon}</S.Icon>
       <S.Title>{title}</S.Title>
-      <S.Items>
-        {items.map((item, index) => (
-          <S.Item key={index}>{item}</S.Item>
-        ))}
-      </S.Items>
+      {items ? (
+        <S.Items>
+          {items?.map((item, index) => (
+            <S.Item key={index}>{item}</S.Item>
+          ))}
+        </S.Items>
+      ) : (
+        <S.Button>Download</S.Button>
+      )}
     </S.Content>
   </S.Wrapper>
 )
