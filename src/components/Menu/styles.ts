@@ -7,6 +7,7 @@ export const Wrapper = styled.menu`
     background: ${theme.gradients.darkBg};
     display: flex;
     align-items: center;
+    padding: 0 10rem;
     ${media.greaterThan('medium')`
       justify-content: space-between;
     `}
@@ -35,12 +36,13 @@ export const Logo = styled.div<ImageProps>`
 `
 export const LogoTitle = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.primary};
-    margin-left: ${theme.spacings.xsmall};
+    margin-left: ${theme.spacings.xxsmall};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: url('/img/background-interativo2.gif');
+    letter-spacing: 0.4rem;
   `}
 `
 

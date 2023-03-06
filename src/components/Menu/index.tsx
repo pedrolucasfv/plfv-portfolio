@@ -17,7 +17,7 @@ const Menu = () => {
 
       <S.LogoWrapper>
         <S.Logo src="/img/Logo.png" role="img" aria-label="Logo" />
-        <S.LogoTitle>Pedro L. F. Vieira</S.LogoTitle>
+        <S.LogoTitle>PLFV</S.LogoTitle>
       </S.LogoWrapper>
 
       <MediaMatch greaterThan="medium">

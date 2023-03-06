@@ -50,7 +50,7 @@ export const Text = styled.h3`
     -webkit-text-fill-color: transparent;
     background-image: url('/img/background-interativo2.gif');
     ${media.lessThan('huge')`
-    font-size: 3rem;
+    font-size: 9rem;
   `}
   `}
 `
@@ -75,7 +75,6 @@ export const ContentInfo = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 4rem;
 `
 
 export const Glass = styled.div`
