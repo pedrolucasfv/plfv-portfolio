@@ -13,6 +13,7 @@ export const LeftContent = styled.div`
     background: ${theme.gradients.top.darkBg};
     grid-row: 1;
     grid-column: 1;
+    border-right: solid ${theme.colors.primary} 0.5rem;
   `}
 `
 export const RightContent = styled.div`
@@ -29,16 +30,16 @@ export const MainContent = styled.div`
 `
 
 export const Title = styled.h2`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: center;
-    font-size: ${theme.font.sizes.huge};
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: url('/img/background-interativo.gif');
-  `}
+  display: flex;
+  justify-content: center;
+  font-size: 8rem;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url('/img/background-interativo.gif');
 `
 
-export const Children = styled.div``
+export const Children = styled.div`
+  margin-top: 8rem;
+`
 export const Image = styled.div``

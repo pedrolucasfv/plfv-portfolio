@@ -1,7 +1,7 @@
 import Banner from 'components/Banner'
 import Divider from 'components/Divider'
 import Menu from 'components/Menu'
-import PageSection from 'templates/PageSection'
+import AboutMe from 'templates/AboutMe'
 import * as S from './styles'
 
 const Home = () => (
@@ -12,7 +12,7 @@ const Home = () => (
     </S.Menu>
     <S.Background src="/img/background-interativo.gif" />
     <Divider />
-    <PageSection title="about me" />
+    <AboutMe />
   </S.Wrapper>
 )
 
