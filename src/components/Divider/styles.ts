@@ -16,7 +16,7 @@ export const Glass = styled.div`
   top: 0;
   left: 2rem;
   right: 2rem;
-  bottom: 2rem;
+  bottom: 3rem;
   background: linear-gradient(
     45deg,
     #fff,
@@ -32,13 +32,14 @@ export const Glass = styled.div`
 
 export const Background = styled.div`
   position: absolute;
+
   top: 0;
   left: 2rem;
   right: 2rem;
-  bottom: 2rem;
+  bottom: 3rem;
   background: url('/img/background-interativo.gif');
-  background-position: 85rem;
-  background-size: 140rem 90rem;
+  background-position: 100rem;
+  background-size: 140rem 96rem;
   z-index: -2;
   -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
   clip-path: polygon(50% 30%, 0 0, 100% 0);
@@ -54,6 +55,7 @@ export const BorderWindow = styled.div`
     z-index: -3;
     -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
     clip-path: polygon(50% 30%, 0 0, 100% 0);
+    overflow: hidden;
   `}
 `
 

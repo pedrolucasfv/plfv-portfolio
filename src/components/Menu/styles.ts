@@ -110,7 +110,7 @@ type MenuToggleProps = {
 
 export const MenuToggle = styled.nav<MenuToggleProps>`
   ${({ isOpenMenu, theme }) => css`
-    background: ${theme.gradients.lightBg};
+    background: ${theme.gradients.top.lightBg};
     display: flex;
     flex-direction: column;
     justify-content: space-between;
