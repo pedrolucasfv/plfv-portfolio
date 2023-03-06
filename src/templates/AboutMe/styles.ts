@@ -20,10 +20,6 @@ export const Image = styled.div`
   `}
 `
 export const Content = styled.div`
-  margin: 0 10rem;
-  ${media.greaterThan('huge')`
-  margin: 0 20rem;
-`}
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   padding-bottom: 10rem;

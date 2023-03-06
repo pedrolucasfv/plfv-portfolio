@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
-  height: 100vh;
-  width: 100%;
-  background: white;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 4fr;
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+    border-bottom: 0.5rem solid ${theme.colors.primary};
+  `}
 `
 export const LeftContent = styled.div`
   ${({ theme }) => css`
@@ -37,9 +38,13 @@ export const Title = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: url('/img/background-interativo.gif');
+  margin-bottom: 8rem;
 `
 
 export const Children = styled.div`
-  margin-top: 8rem;
+  margin: 0 10rem;
+  ${media.greaterThan('huge')`
+  margin: 0 20rem;
+`}
 `
 export const Image = styled.div``

@@ -1,7 +1,7 @@
 import Banner from 'components/Banner'
-import Divider from 'components/Divider'
 import Menu from 'components/Menu'
 import AboutMe from 'templates/AboutMe'
+import Projects from 'templates/Projects'
 import * as S from './styles'
 
 const Home = () => (
@@ -10,9 +10,9 @@ const Home = () => (
     <S.Menu>
       <Menu />
     </S.Menu>
-    <S.Background src="/img/background-interativo.gif" />
-    <Divider />
     <AboutMe />
+    <Projects />
+    <S.Background src="/img/background-interativo.gif" />
   </S.Wrapper>
 )
 

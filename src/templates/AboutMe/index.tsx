@@ -2,6 +2,7 @@ import InfoCard from 'components/InfoCard'
 import PageSection from 'templates/PageSection'
 import * as S from './styles'
 import { Book } from '@styled-icons/ionicons-solid/Book'
+import Divider from 'components/Divider'
 
 const AboutMe = () => {
   const formationInfoCard = {
@@ -32,6 +33,7 @@ const AboutMe = () => {
   }
   return (
     <S.Wrapper>
+      <Divider />
       <PageSection title="Sobre mim">
         <S.Content>
           <S.LeftContent>
