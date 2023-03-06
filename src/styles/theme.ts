@@ -23,12 +23,22 @@ export default {
     }
   },
   gradients: {
-    darkBg:
-      'linear-gradient(to bottom left,#282828,#212121,#1a1a1a,#131313,#0a0a0a)',
-    lightBg:
-      'linear-gradient(to left top,#e3e3e3,#dedede,#e5e5e5,#ececec,#f5f5f5)',
-    blueBg:
-      'linear-gradient(to right top,#1616C8,#2626D8,#3636E8,#4646F8,#5656FF)'
+    top: {
+      darkBg:
+        'linear-gradient(to  left top,#282828,#212121,#1a1a1a,#131313,#0a0a0a)',
+      lightBg:
+        'linear-gradient(to left top,#e3e3e3,#dedede,#e5e5e5,#ececec,#f5f5f5)',
+      blueBg:
+        'linear-gradient(to right top,#1616C8,#2626D8,#3636E8,#4646F8,#5656FF)'
+    },
+    bottom: {
+      darkBg:
+        'linear-gradient(to  left bottom,#282828,#212121,#1a1a1a,#131313,#0a0a0a)',
+      lightBg:
+        'linear-gradient(to left bottom,#e3e3e3,#dedede,#e5e5e5,#ececec,#f5f5f5)',
+      blueBg:
+        'linear-gradient(to right bottom,#1616C8,#2626D8,#3636E8,#4646F8,#5656FF)'
+    }
   },
   colors: {
     primary: '#D4BE7D',
