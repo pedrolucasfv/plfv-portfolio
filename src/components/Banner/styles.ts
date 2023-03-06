@@ -62,7 +62,7 @@ export const Content = styled.div`
     left: 0.7rem;
     right: 0.7rem;
     bottom: 0.3rem;
-    background: ${theme.gradients.darkBg};
+    background: ${theme.gradients.top.darkBg};
     display: flex;
     align-items: center;
     flex-direction: column;

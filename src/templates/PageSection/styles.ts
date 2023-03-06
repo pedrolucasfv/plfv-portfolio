@@ -1,26 +1,23 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.main`
-  ${({ theme }) => css`
-    height: 100vh;
-    width: 100%;
-    margin-top: 13rem;
-    background: white;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    border-top: solid ${theme.colors.primary} 0.5rem;
-  `}
+  height: 100vh;
+  width: 100%;
+  background: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 4fr;
 `
 export const LeftContent = styled.div`
   ${({ theme }) => css`
-    background: ${theme.gradients.darkBg};
+    background: ${theme.gradients.top.darkBg};
     grid-row: 1;
     grid-column: 1;
   `}
 `
 export const RightContent = styled.div`
   ${({ theme }) => css`
-    background: ${theme.gradients.lightBg};
+    background: ${theme.gradients.top.lightBg};
     grid-row: 1;
     grid-column: 2;
   `}
@@ -35,7 +32,6 @@ export const Title = styled.h2`
   ${({ theme }) => css`
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
     font-size: ${theme.font.sizes.huge};
     text-transform: uppercase;
     -webkit-background-clip: text;
