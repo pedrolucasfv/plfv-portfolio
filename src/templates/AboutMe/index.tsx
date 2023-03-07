@@ -9,10 +9,9 @@ const AboutMe = () => {
     icon: <Book size={20} />,
     title: 'Formação',
     items: [
-      'Interrompida no 5º período: Engenharia de Produção - Universidade Federal de Ouro Preto - João Monlevade - Minas Gerais',
       'Cursando: Engenharia de Computação - Universidade Federal de Ouro Preto - João Monlevade - Minas Gerais',
       'Curso: React Avançado: Crie aplicações com NextJS, Strapi e mais',
-      'Faço parte da comunidade CoDe'
+      'Mentorado da comunidade CoDe'
     ]
   }
   const skillsCard = {

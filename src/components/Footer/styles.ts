@@ -46,23 +46,25 @@ export const Line = styled.div`
   `}
 `
 export const Contact = styled.div`
-  grid-column: 5/8;
-  grid-row: 1/4;
-  width: 35rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 1rem;
-  margin-top: 5rem;
-`
-export const Title = styled.h4`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xxlarge};
-    color: ${theme.colors.white};
+    grid-column: 5/8;
+    grid-row: 1/4;
+    width: 37rem;
+    height: 17rem;
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 4rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+    background: ${theme.gradients.top.darkBg};
+    border: 0.5rem solid ${theme.colors.primary};
+    position: relative;
+    background-image: url('/img/background-interativo.gif');
   `}
 `
+
 export const IconList = styled.div`
   display: flex;
   justify-content: center;
@@ -81,14 +83,15 @@ export const Icon = styled.a`
     border: 0.3rem solid ${theme.colors.primary};
     grid-column: 6/8;
     grid-row: 3;
-    background: ${theme.gradients.top.blueBg};
-    background-image: url('/img/background-interativo.gif');
+    background: ${theme.gradients.top.darkBg};
     cursor: pointer;
+    z-index: 1;
     svg {
       height: 4rem;
       width: 4rem;
     }
     :hover {
+      background: ${theme.gradients.top.blueBg};
       svg {
         height: 5rem;
         width: 5rem;
@@ -161,4 +164,21 @@ export const Glass = styled.div`
   );
   -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
   clip-path: polygon(50% 30%, 0 0, 100% 0);
+`
+export const GlassContact = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    #fff,
+    rgba(7, 154, 207, 0.5) 20%,
+    rgba(4, 77, 104, 0.5) 30%,
+    hsla(0, 0%, 100%, 0.5) 50%,
+    rgba(4, 77, 104, 0.5) 85%,
+    #fff
+  );
+  z-index: 0;
 `

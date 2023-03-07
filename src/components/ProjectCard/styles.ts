@@ -32,6 +32,7 @@ export const Image = styled.div<ImageProps>`
     height: 15rem;
     width: 24rem;
     background: url(${src});
+    background-position: center;
     background-size: cover;
     border: solid 0.2rem ${theme.colors.white};
     border-radius: 0.8rem;
@@ -43,7 +44,6 @@ export const Name = styled.h3`
     font-size: ${theme.font.sizes.xxlarge};
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    margin-bottom: 2rem;
     color: ${theme.colors.primary};
   `}
 `
@@ -51,7 +51,7 @@ export const Name = styled.h3`
 export const Description = styled.h4`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
-    text-align: justify;
+    margin-bottom: 2rem;
   `}
 `
 
@@ -59,5 +59,6 @@ export const InfoContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   margin: 0 3rem;
 `

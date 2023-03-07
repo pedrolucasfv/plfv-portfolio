@@ -1,5 +1,7 @@
 import * as S from './styles'
-import { Book } from '@styled-icons/ionicons-solid/Book'
+import { LogoGithub } from '@styled-icons/ionicons-solid/LogoGithub'
+import { LogoLinkedin } from '@styled-icons/ionicons-solid/LogoLinkedin'
+import { Document } from '@styled-icons/ionicons-solid/Document'
 
 const Footer = () => (
   <S.Wrapper>
@@ -13,16 +15,16 @@ const Footer = () => (
       <S.Image />
       <S.Line />
       <S.Contact>
-        <S.Title>Entre em contato</S.Title>
+        <S.GlassContact />
         <S.IconList>
           <S.Icon>
-            <Book size={22} />
+            <Document size={22} />
           </S.Icon>
           <S.Icon>
-            <Book size={22} />
+            <LogoGithub size={22} />
           </S.Icon>
           <S.Icon>
-            <Book size={22} />
+            <LogoLinkedin size={22} />
           </S.Icon>
         </S.IconList>
       </S.Contact>
