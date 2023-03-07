@@ -5,6 +5,10 @@ import PageSection from '.'
 
 describe('<PageSection />', () => {
   it('should render the heading', () => {
-    renderWithTheme(<PageSection title="kk" />)
+    renderWithTheme(
+      <PageSection title="kk">
+        <h1>kk</h1>
+      </PageSection>
+    )
   })
 })

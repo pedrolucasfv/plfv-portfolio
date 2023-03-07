@@ -45,7 +45,7 @@ const Projects = () => {
     <S.Wrapper>
       <S.Container>
         <Divider />
-        <PageSection title="Projects">
+        <PageSection title="Projetos">
           <S.Content>
             {projects.map((project, index) => (
               <S.ProjectCard key={index}>

@@ -9,6 +9,7 @@ export const Content = styled.div`
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 5rem;
 
   ${media.greaterThan('huge')`
   grid-template-columns: 1fr 1fr 1fr;
@@ -25,7 +26,8 @@ export const ProjectCard = styled.div``
 export const Glass = styled.div`
   ${({ theme }) => css`
     height: 100%;
-    border-top: 0.5rem solid ${theme.colors.primary};
+    //border-top: 0.5rem solid ${theme.colors.primary};
+    //border-bottom: 0.5rem solid ${theme.colors.primary};
     position: absolute;
     left: 0;
     top: 0;
@@ -53,5 +55,6 @@ export const RiverSide = styled.div`
     height: 100%;
     width: 13%;
     border-top: 0.5rem solid ${theme.colors.primary};
+    border-bottom: 0.5rem solid ${theme.colors.primary};
   `}
 `
