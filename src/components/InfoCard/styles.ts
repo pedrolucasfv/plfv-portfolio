@@ -82,7 +82,7 @@ export const Button = styled.a`
           letter-spacing: normal;
         }
         100% {
-          letter-spacing: 1rem;
+          letter-spacing: 0.6rem;
         }
       }
     }

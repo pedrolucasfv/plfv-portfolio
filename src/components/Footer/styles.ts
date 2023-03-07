@@ -4,10 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.main`
   ${({ theme }) => css`
     margin-top: 10rem;
-    height: 50rem;
     background: ${theme.gradients.top.darkBg};
-    position: relative;
-    z-index: -4;
     border-top: 0.5rem solid ${theme.colors.primary};
     display: flex;
     flex-direction: column;
@@ -20,6 +17,7 @@ export const Content = styled.div`
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   color: white;
+  padding-top: 5rem;
   margin: 0 10rem;
   ${media.greaterThan('huge')`
   margin: 0 20rem;
@@ -27,14 +25,15 @@ export const Content = styled.div`
 `
 
 export const Image = styled.div`
-  grid-column: 1/3;
+  grid-column: 1/4;
   grid-row: 1/4;
-  height: 30rem;
+  height: 20rem;
   width: 30rem;
   background: url('/img/Logo.png');
   background-position: center;
   background-size: cover;
   align-self: center;
+  margin-bottom: 5rem;
 `
 
 export const Line = styled.div`
@@ -48,7 +47,7 @@ export const Line = styled.div`
 `
 export const Contact = styled.div`
   grid-column: 5/8;
-  grid-row: 2/4;
+  grid-row: 1/4;
   width: 35rem;
   height: 15rem;
   display: flex;
@@ -56,6 +55,7 @@ export const Contact = styled.div`
   align-items: center;
   justify-content: space-around;
   border-radius: 1rem;
+  margin-top: 5rem;
 `
 export const Title = styled.h4`
   ${({ theme }) => css`
@@ -71,7 +71,6 @@ export const IconList = styled.div`
 
 export const Icon = styled.a`
   ${({ theme }) => css`
-    cursor: pointer;
     margin-left: 1.8rem;
     width: 9rem;
     height: 9rem;
@@ -84,15 +83,15 @@ export const Icon = styled.a`
     grid-row: 3;
     background: ${theme.gradients.top.blueBg};
     background-image: url('/img/background-interativo.gif');
-    z-index: 10;
+    cursor: pointer;
     svg {
       height: 4rem;
       width: 4rem;
     }
     :hover {
       svg {
-        height: 6rem;
-        width: 6rem;
+        height: 5rem;
+        width: 5rem;
       }
     }
   `}
@@ -117,11 +116,10 @@ export const Text = styled.h4`
 
 export const Background = styled.div`
   position: absolute;
-
-  top: 0.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
-  bottom: 4.5rem;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
   background: url('/img/background-interativo.gif');
   background-position: 85rem;
   background-size: 120rem 96rem;
@@ -131,29 +129,27 @@ export const Background = styled.div`
 `
 export const BorderWindow = styled.div`
   ${({ theme }) => css`
-    position: relative;
-    width: 30rem;
-    height: 40rem;
+    width: 20rem;
+    height: 20rem;
     background: ${theme.colors.primary};
     background-position: center;
     background-size: cover;
     z-index: -3;
     -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
     clip-path: polygon(50% 30%, 0 0, 100% 0);
-    overflow: hidden;
   `}
 `
 
 export const Window = styled.div`
   position: absolute;
+  height: 20rem;
 `
-
 export const Glass = styled.div`
   position: absolute;
-  top: 0.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
-  bottom: 4.5rem;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
   background: linear-gradient(
     45deg,
     #fff,

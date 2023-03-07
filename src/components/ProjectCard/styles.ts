@@ -10,6 +10,7 @@ export const Wrapper = styled.main`
     border: solid 0.3rem ${theme.colors.primary};
     border-radius: 0.8rem;
     box-shadow: 0.5rem 0.5rem 0.6rem rgb(0 0 0 / 30%);
+    cursor: pointer;
     :hover {
       background: ${theme.gradients.top.blueBg};
     }
