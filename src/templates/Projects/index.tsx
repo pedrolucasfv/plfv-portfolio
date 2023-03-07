@@ -42,6 +42,12 @@ const Projects = () => {
         'Uma calculadora feita sem framework que tem a opção de mudar o tema',
       name: 'Calculator App',
       image: '/img/calculatorapp-print.png'
+    },
+    {
+      description:
+        'Projeto feito por mim, e mais quatro alunos, que ganhou o primeiro lugar na hackathon SEnC 2020',
+      name: 'Pinça-me',
+      image: '/img/pincame-print.png'
     }
   ]
   return (

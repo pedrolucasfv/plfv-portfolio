@@ -62,7 +62,7 @@ const AboutMe = () => {
               <span> Locobots </span>
               da universidade, onde tive um enorme crescimento, trabalhando em
               equipe, fazendo projetos de programação e eletrônica, e também
-              fazendo projetos sociais como o robótica sustentável. Até montar
+              fazendo projetos sociais como o robótica sustentável. Até montamos
               uma equipe para a Hackathon SEnC 2020 (USP), feito na pandemia, e
               ficamos em primeiro lugar com o projeto Pinça-me.
             </S.Text>

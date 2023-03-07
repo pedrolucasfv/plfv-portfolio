@@ -15,7 +15,7 @@ export const Image = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: solid ${theme.colors.primary} 0.5rem;
+    border: solid ${theme.colors.primary} 1rem;
     border-radius: 1rem;
   `}
 `

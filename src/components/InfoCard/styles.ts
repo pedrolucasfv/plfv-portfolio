@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const Icon = styled.div`
   ${({ theme }) => css`
     margin-left: 1.8rem;
-    background-color: ${theme.colors.secondary};
+    background: ${theme.gradients.top.blueBg};
     width: 7rem;
     height: 7rem;
     display: flex;
@@ -31,6 +31,7 @@ export const Icon = styled.div`
     align-items: center;
     border-radius: 50%;
     border: 0.3rem solid ${theme.colors.primary};
+
     svg {
       height: 4rem;
       width: 4rem;

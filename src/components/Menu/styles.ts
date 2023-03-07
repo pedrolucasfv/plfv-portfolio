@@ -7,12 +7,16 @@ export const Wrapper = styled.menu`
     background: ${theme.gradients.top.darkBg};
     display: flex;
     align-items: center;
-    padding: 0 10rem;
+    padding: 0 5rem;
+    width: 55%;
+    margin-left: 23%;
     ${media.greaterThan('medium')`
       justify-content: space-between;
     `}
     height: 6rem;
     border-bottom: 0.3rem solid ${theme.colors.primary};
+    border-left: 0.3rem solid ${theme.colors.primary};
+    border-right: 0.3rem solid ${theme.colors.primary};
   `}
 `
 export const LogoWrapper = styled.div`
@@ -97,7 +101,7 @@ export const MenuLink = styled.div`
           letter-spacing: normal;
         }
         100% {
-          letter-spacing: 0.4rem;
+          letter-spacing: 0.3rem;
         }
       }
     }
