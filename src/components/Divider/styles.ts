@@ -58,7 +58,13 @@ export const BorderWindow = styled.div`
     overflow: hidden;
   `}
 `
-
+export const Window = styled.div`
+  grid-row: 1;
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  height: 20rem;
+`
 export const LeftContent = styled.div`
   ${({ theme }) => css`
     background: ${theme.gradients.bottom.darkBg};
@@ -75,12 +81,4 @@ export const RightContent = styled.div`
     grid-column: 2;
     z-index: -5;
   `}
-`
-
-export const Window = styled.div`
-  grid-row: 1;
-  grid-column: 1/3;
-  display: flex;
-  justify-content: center;
-  height: 20rem;
 `

@@ -1,4 +1,5 @@
 import Banner from 'components/Banner'
+import Footer from 'components/Footer'
 import Menu from 'components/Menu'
 import AboutMe from 'templates/AboutMe'
 import Projects from 'templates/Projects'
@@ -12,6 +13,7 @@ const Home = () => (
     </S.Menu>
     <AboutMe />
     <Projects />
+    <Footer />
     <S.Background src="/img/background-interativo.gif" />
   </S.Wrapper>
 )
