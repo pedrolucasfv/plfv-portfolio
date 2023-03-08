@@ -17,13 +17,19 @@ const Footer = () => (
       <S.Contact>
         <S.GlassContact />
         <S.IconList>
-          <S.Icon>
+          <S.Icon
+            href="https://pedrolucasfv.notion.site/925adc68502546b28222b6cf330a25c1?v=9469121632cd48778dfcb1b39012a2ec"
+            target="_blank"
+          >
             <Document size={22} />
           </S.Icon>
-          <S.Icon>
+          <S.Icon href="https://github.com/pedrolucasfv" target="_blank">
             <LogoGithub size={22} />
           </S.Icon>
-          <S.Icon>
+          <S.Icon
+            href="https://www.linkedin.com/in/pedrolucasfv/"
+            target="_blank"
+          >
             <LogoLinkedin size={22} />
           </S.Icon>
         </S.IconList>

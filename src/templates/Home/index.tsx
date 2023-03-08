@@ -31,13 +31,19 @@ const Home = () => {
 
   return (
     <S.Wrapper>
-      <Banner />
+      <div id="banner">
+        <Banner />
+      </div>
       <div id="sentinela" />
       <S.Menu id="menu">
         <Menu />
       </S.Menu>
-      <AboutMe />
-      <Projects />
+      <div id="aboutme">
+        <AboutMe />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
       <Footer />
       <S.Background />
     </S.Wrapper>

@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    width: 40rem;
-    ${media.lessThan('huge')`
     width: 35rem;
-  `}
+    @media (min-width: 1500px) {
+      width: 40rem;
+    }
     background: ${theme.gradients.top.darkBg};
     color: white;
     display: grid;
@@ -61,6 +60,7 @@ export const Item = styled.li`
 
 export const Button = styled.a`
   ${({ theme }) => css`
+    text-decoration: none;
     padding: 1rem 4rem;
     margin-bottom: 2rem;
     display: flex;
@@ -68,22 +68,32 @@ export const Button = styled.a`
     font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.white};
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
     font-weight: 600;
     background-image: url('/img/background-interativo.gif');
     border: 0.2rem solid ${theme.colors.primary};
     cursor: pointer;
+    animation: go 0.4s forwards;
+    @keyframes button-back {
+      0% {
+        letter-spacing: 1rem;
+        padding: 1rem 2rem;
+      }
+      100% {
+        letter-spacing: 0.3rem;
+      }
+    }
 
     &:hover {
       font-weight: ${theme.font.bold};
       color: ${theme.colors.white};
-      animation: go-back 0.4s both;
-      @keyframes go-back {
+      animation: button 0.4s forwards;
+      @keyframes button {
         0% {
-          letter-spacing: normal;
+          letter-spacing: 0.3rem;
         }
         100% {
-          letter-spacing: 0.6rem;
+          letter-spacing: 1rem;
+          padding: 1rem 2rem;
         }
       }
     }

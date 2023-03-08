@@ -8,13 +8,14 @@ export const Content = styled.div`
   width: 75%;
   display: grid;
   grid-gap: 3rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   padding-bottom: 5rem;
-
-  ${media.greaterThan('huge')`
-  grid-template-columns: 1fr 1fr 1fr;
-  
+  ${media.greaterThan('medium')`
+  grid-template-columns: 1fr 1fr;
   `}
+  @media (min-width: 1500px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `
 export const Container = styled.div`
   -webkit-clip-path: polygon(0 0, 78% 0, 78% 100%, 0% 100%);

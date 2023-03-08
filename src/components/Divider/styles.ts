@@ -32,7 +32,6 @@ export const Glass = styled.div`
 
 export const Background = styled.div`
   position: absolute;
-
   top: 0.5rem;
   left: 2.5rem;
   right: 2.5rem;
@@ -50,8 +49,6 @@ export const BorderWindow = styled.div`
     width: 30rem;
     height: 40rem;
     background: ${theme.colors.primary};
-    background-position: center;
-    background-size: cover;
     z-index: -3;
     -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
     clip-path: polygon(50% 30%, 0 0, 100% 0);

@@ -87,6 +87,7 @@ export const Icon = styled.a`
     cursor: pointer;
     z-index: 1;
     svg {
+      color: white;
       height: 4rem;
       width: 4rem;
     }

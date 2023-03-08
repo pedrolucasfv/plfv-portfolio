@@ -3,6 +3,7 @@ import { useState } from 'react'
 import * as S from './styles'
 import { Menu as MenuIcon } from '@styled-icons/ionicons-solid/Menu'
 import { Close as CloseIcon } from '@styled-icons/ionicons-solid/Close'
+import { Link } from 'react-scroll'
 
 const Menu = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
@@ -22,9 +23,33 @@ const Menu = () => {
 
       <MediaMatch greaterThan="medium">
         <S.MenuNav>
-          <S.MenuLink>Home</S.MenuLink>
-          <S.MenuLink>About Me</S.MenuLink>
-          <S.MenuLink>Projects</S.MenuLink>
+          <Link
+            to="banner"
+            spy={true}
+            smooth={true}
+            offset={-117}
+            duration={500}
+          >
+            <S.MenuLink>HOME</S.MenuLink>
+          </Link>
+          <Link
+            to="aboutme"
+            spy={true}
+            smooth={true}
+            offset={-117}
+            duration={500}
+          >
+            <S.MenuLink>ABOUT ME</S.MenuLink>
+          </Link>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-117}
+            duration={500}
+          >
+            <S.MenuLink>PROJECTS</S.MenuLink>
+          </Link>
         </S.MenuNav>
       </MediaMatch>
 
@@ -36,9 +61,33 @@ const Menu = () => {
           onClick={() => setIsOpenMenu(false)}
         />
         <S.MenuNav>
-          <S.MenuLink>Home</S.MenuLink>
-          <S.MenuLink>AboutMe</S.MenuLink>
-          <S.MenuLink>Projects</S.MenuLink>
+          <Link
+            to="banner"
+            spy={true}
+            smooth={true}
+            offset={-117}
+            duration={500}
+          >
+            <S.MenuLink>HOME</S.MenuLink>
+          </Link>
+          <Link
+            to="aboutme"
+            spy={true}
+            smooth={true}
+            offset={-117}
+            duration={500}
+          >
+            <S.MenuLink>ABOUT ME</S.MenuLink>
+          </Link>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-117}
+            duration={500}
+          >
+            <S.MenuLink>PROJECTS</S.MenuLink>
+          </Link>
         </S.MenuNav>
       </S.MenuToggle>
     </S.Wrapper>

@@ -18,7 +18,9 @@ const InfoCard = ({ icon, items, title }: InfoCardProps) => (
           ))}
         </S.Items>
       ) : (
-        <S.Button>Download</S.Button>
+        <S.Button href="/resume/Pedro_Lucas_FV_currículo.pdf" download>
+          Download
+        </S.Button>
       )}
     </S.Content>
   </S.Wrapper>

@@ -5,12 +5,12 @@ export const Wrapper = styled.main``
 
 export const Image = styled.div`
   background: url('/img/Logo.png');
-  height: 50rem;
-  width: 50rem;
-  ${media.lessThan('huge')`
-  height: 30rem;
-  width: 30rem;
-  `}
+  height: 35rem;
+  width: 35rem;
+  @media (min-width: 1500px) {
+    height: 50rem;
+    width: 50rem;
+  }
   background-position: center;
   background-size: cover;
 `
@@ -20,37 +20,41 @@ export const Title = styled.h3`
     margin-top: -3rem;
     letter-spacing: 0.3rem;
 
-    font-size: 8.5rem;
+    font-size: 6.5rem;
     margin-left: ${theme.spacings.xsmall};
     color: ${theme.colors.white};
-    ${media.lessThan('huge')`
-    font-size: 4.5rem;
-  `}
+    @media (min-width: 1500px) {
+      font-size: 8.5rem;
+    }
   `}
 `
 export const Description = styled.h3`
   ${({ theme }) => css`
-    font-size: 4.5rem;
+    font-size: 3.5rem;
+
     color: ${theme.colors.white};
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     margin-left: ${theme.spacings.xsmall};
 
-    ${media.lessThan('huge')`
-    font-size: 3rem;
-  `}
+    @media (min-width: 1500px) {
+      font-size: 4.5rem;
+    }
   `}
 `
 export const Text = styled.h3`
   ${({ theme }) => css`
     margin-top: 10rem;
-    font-size: 12rem;
+    font-size: 9rem;
     margin-left: ${theme.spacings.xsmall};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: url('/img/background-interativo2.gif');
     ${media.lessThan('huge')`
-    font-size: 9rem;
+    @media (min-width: 1500px) {
+      font-size: 12rem;
+
+    }
   `}
   `}
 `
