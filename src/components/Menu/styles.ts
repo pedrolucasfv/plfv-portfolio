@@ -8,8 +8,7 @@ export const Wrapper = styled.menu`
     display: flex;
     align-items: center;
     padding: 0 5rem;
-    width: 55%;
-    margin-left: 23%;
+    position: relative;
     ${media.greaterThan('medium')`
       justify-content: space-between;
     `}
@@ -17,6 +16,8 @@ export const Wrapper = styled.menu`
     border-bottom: 0.3rem solid ${theme.colors.primary};
     border-left: 0.3rem solid ${theme.colors.primary};
     border-right: 0.3rem solid ${theme.colors.primary};
+    border-bottom-left-radius: 0.7em;
+    border-bottom-right-radius: 0.7rem;
   `}
 `
 export const LogoWrapper = styled.div`

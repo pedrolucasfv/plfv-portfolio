@@ -7,7 +7,7 @@ const Banner = () => (
           <S.Image />
           <S.Title>Pedro Lucas Ferreira Vieira </S.Title>
           <S.Description>Desenvolvedor Front End</S.Description>
-          <S.Text>WELCOME!</S.Text>
+          <S.Text>BEM VINDO!</S.Text>
         </S.ContentInfo>
       </S.Content>
     </S.BorderContent>

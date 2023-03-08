@@ -1,11 +1,59 @@
 import styled, { css } from 'styled-components'
+import { Wrapper as MenuWrapper } from 'components/Menu/styles'
 
-export const Wrapper = styled.main``
+export const Wrapper = styled.main`
+  .fix {
+    animation: menu-fixed 0.5s forwards;
+    @keyframes menu-fixed {
+      0% {
+        width: 55%;
+        margin-left: 23%;
+      }
+      100% {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    ${MenuWrapper} {
+      border-left: none;
+      border-right: none;
+    }
+
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+  .normal {
+    animation: menu-normal 0.3s forwards;
+    @keyframes menu-normal {
+      0% {
+        width: 100%;
+        margin-left: 0;
+      }
+      100% {
+        width: 55%;
+        margin-left: 23%;
+      }
+    }
+
+    position: relative;
+    top: 0;
+    z-index: 10;
+    ${MenuWrapper} {
+      ${({ theme }) => css`
+        border-left: 0.3rem solid ${theme.colors.primary};
+        border-right: 0.3rem solid ${theme.colors.primary};
+      `}
+    }
+  }
+`
 
 export const Menu = styled.div`
   ${({ theme }) => css`
     border-top: solid ${theme.colors.primary} 0.3rem;
     margin-top: -0.3rem;
+    width: 55%;
+    margin-left: 23%;
   `}
 `
 type ImageProps = {
