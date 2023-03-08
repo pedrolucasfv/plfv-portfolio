@@ -49,13 +49,14 @@ const AboutMe = () => {
           <S.RightContent>
             <S.Image />
             <S.Text>
-              Olá, meu nome é <span> Pedro Lucas Ferreira Vieira</span>, e aqui
-              você vai encontrar minhas habilidades, formações e meu currículo.
-              Conheci o mundo da programação quando entrei na faculdade, iniciei
-              o curso de engenharia de produção e me facinei quando fiz meu
-              primeiro programa em C no ciclo básico. Desde então, eu comecei a
-              querer programar mais e mais, então no 5º período eu decidi mudar
-              para Engenharia da computação.
+              Olá, meu nome é <span> Pedro Lucas Ferreira Vieira</span>, nasci
+              em 1996 e sou apaixonado por códigos. Conheci o mundo da
+              programação quando entrei na faculdade, até então eu não sabia o
+              que era programar iniciei o curso de engenharia de produção e me
+              facinei quando fiz meu primeiro programa em C no ciclo básico. Me
+              identifiquei com esse mundo e então no 5º período eu decidi mudar
+              para Engenharia da computação para ter um contato maior com a
+              área.
             </S.Text>
             <S.Text>
               Quando mudei de curso, eu me inscrevi no time de robótica
@@ -68,13 +69,13 @@ const AboutMe = () => {
             </S.Text>
             <S.Text>
               Até que chegou o momento em que decidi não seguir com a eletrônica
-              e focar exclusivamente em ser Dev Comecei a estudar as linguagens
+              e focar exclusivamente em ser Dev. Comecei a estudar as linguagens
               e frameworks de front end e entrei na <span>comunidade CoDe</span>
-              , onde aprendi como ser verdadeiramente um dev, com melhora de
-              ambiente, mind-set e organização. Desde então passei a fazer
-              projetos para desenvolver minhas habilidades e popular meu
-              portfólio, para mostrar minhas skills para o mercado e ter um
-              histórico da minha trajetória.
+              , onde aprendi a pensar como um dev, melhorar o ambiente para
+              desenvolver, ter um melhor mind-set e ser mais organizado. Desde
+              então passei a fazer projetos para desenvolver minhas habilidades
+              e popular meu portfólio, para mostrar meu conhecimento para o
+              mercado e ter um histórico da minha trajetória.
             </S.Text>
             <S.Text>
               Confiram detalhes dos meus projetos no Notion, onde documento tudo
@@ -82,7 +83,7 @@ const AboutMe = () => {
               eu guardo informação para eu lembrar nos próximos projetos. Vejam
               meus códigos no github para entender minha maneira de pensar, e se
               conectem a mim no linkedIn para acompanharem minha jornada.
-              <span> Forte abraço!</span>
+              <span> Um forte abraço!</span>
             </S.Text>
           </S.RightContent>
         </S.Content>
