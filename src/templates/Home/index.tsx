@@ -20,7 +20,6 @@ const Home = () => {
         menu.classList.remove('fix')
         menu.classList.add('normal')
       }
-      console.log('apareeceu', entries)
     })
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const menu = document.querySelector('#menu')!

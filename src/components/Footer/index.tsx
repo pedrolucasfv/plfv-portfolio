@@ -12,8 +12,6 @@ const Footer = () => (
       </S.BorderWindow>
     </S.Window>
     <S.Content>
-      <S.Image />
-      <S.Line />
       <S.Contact>
         <S.GlassContact />
         <S.IconList>
@@ -34,6 +32,8 @@ const Footer = () => (
           </S.Icon>
         </S.IconList>
       </S.Contact>
+      <S.Image />
+      <S.Line />
       <S.Copyright>
         <S.Text>© Pedro L. F. Vieira, 2023</S.Text>
         <S.Text>Este portfólio foi inspirado no James Ciskanik</S.Text>

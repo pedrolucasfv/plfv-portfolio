@@ -1,4 +1,5 @@
 import Divider from 'components/Divider'
+import MediaMatch from 'components/MediaMatch'
 import ProjectCard from 'components/ProjectCard'
 import PageSection from 'templates/PageSection'
 import * as S from './styles'
@@ -67,8 +68,10 @@ const Projects = () => {
           </S.Content>
         </PageSection>
       </S.Container>
-      <S.Glass />
-      <S.RiverSide />
+      <MediaMatch greaterThan="medium">
+        <S.Glass />
+        <S.RiverSide />
+      </MediaMatch>
     </S.Wrapper>
   )
 }

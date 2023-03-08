@@ -18,8 +18,10 @@ export const Content = styled.div`
   }
 `
 export const Container = styled.div`
-  -webkit-clip-path: polygon(0 0, 78% 0, 78% 100%, 0% 100%);
-  clip-path: polygon(0 0, 78% 0, 78% 100%, 0% 100%);
+  ${media.greaterThan('medium')`
+    -webkit-clip-path: polygon(0 0, 78% 0, 78% 100%, 0% 100%);
+     clip-path: polygon(0 0, 78% 0, 78% 100%, 0% 100%);
+  `}
 `
 
 export const ProjectCard = styled.div``

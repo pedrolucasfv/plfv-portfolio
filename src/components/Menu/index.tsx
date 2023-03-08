@@ -68,7 +68,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>HOME</S.MenuLink>
+            <S.MenuLink onClick={() => setIsOpenMenu(false)}>HOME</S.MenuLink>
           </Link>
           <Link
             to="aboutme"
@@ -77,7 +77,9 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>ABOUT ME</S.MenuLink>
+            <S.MenuLink onClick={() => setIsOpenMenu(false)}>
+              ABOUT ME
+            </S.MenuLink>
           </Link>
           <Link
             to="projects"
@@ -86,7 +88,9 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>PROJECTS</S.MenuLink>
+            <S.MenuLink onClick={() => setIsOpenMenu(false)}>
+              PROJECTS
+            </S.MenuLink>
           </Link>
         </S.MenuNav>
       </S.MenuToggle>

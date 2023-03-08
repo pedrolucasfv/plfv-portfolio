@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -6,6 +7,10 @@ export const Wrapper = styled.main`
     @media (min-width: 1500px) {
       width: 40rem;
     }
+    ${media.lessThan('medium')`
+    width: 30rem;
+
+  `}
     background: ${theme.gradients.top.darkBg};
     color: white;
     display: grid;
@@ -45,6 +50,9 @@ export const Title = styled.h3`
     letter-spacing: 0.5rem;
     color: ${theme.colors.primary};
     margin: 1rem 0 2.3rem 0;
+    ${media.lessThan('medium')`
+    font-size: ${theme.font.sizes.xlarge};
+  `}
   `}
 `
 

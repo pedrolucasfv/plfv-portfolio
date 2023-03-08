@@ -6,6 +6,7 @@ export const Wrapper = styled.main`
   margin-top: 13rem;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 4fr;
+
   ${({ theme }) => css`
     border-top: solid ${theme.colors.primary} 0.6rem;
   `}

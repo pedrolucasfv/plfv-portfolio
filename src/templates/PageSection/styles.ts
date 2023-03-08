@@ -39,10 +39,16 @@ export const Title = styled.h2`
   -webkit-text-fill-color: transparent;
   background-image: url('/img/background-interativo.gif');
   margin-bottom: 8rem;
+  ${media.lessThan('medium')`
+  font-size: 4rem;
+  `}
 `
 
 export const Children = styled.div`
+  margin: 0 5rem;
+  ${media.greaterThan('medium')`
   margin: 0 10rem;
+`}
   ${media.greaterThan('huge')`
   margin: 0 20rem;
 `}

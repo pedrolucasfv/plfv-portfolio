@@ -19,6 +19,12 @@ export const Content = styled.div`
   color: white;
   padding-top: 5rem;
   margin: 0 10rem;
+
+  ${media.lessThan('medium')`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  `}
   ${media.greaterThan('huge')`
   margin: 0 20rem;
 `}
@@ -62,6 +68,11 @@ export const Contact = styled.div`
     border: 0.5rem solid ${theme.colors.primary};
     position: relative;
     background-image: url('/img/background-interativo.gif');
+    ${media.lessThan('medium')`
+    margin: 3rem 0;
+    margin-left: 2rem;
+
+  `}
   `}
 `
 
@@ -113,6 +124,7 @@ export const Text = styled.h4`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xsmall};
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0.5rem;
     color: ${theme.colors.primary};
   `}
