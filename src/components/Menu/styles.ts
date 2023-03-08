@@ -58,7 +58,7 @@ export const IconWrapper = styled.div`
   height: 2.4rem;
   color: white;
   ${media.lessThan('medium')`
-      margin-left: 1.5rem;
+      margin-left: 0.5rem;
   `}
 `
 

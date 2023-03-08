@@ -70,9 +70,11 @@ export const Contact = styled.div`
     background-image: url('/img/background-interativo.gif');
     ${media.lessThan('medium')`
     margin: 3rem 0;
-    margin-left: 2rem;
-
-  `}
+    margin-left: 5%;
+    `}
+    @media (max-width: 400px) {
+      width: 34rem;
+    }
   `}
 `
 
@@ -84,7 +86,7 @@ export const IconList = styled.div`
 
 export const Icon = styled.a`
   ${({ theme }) => css`
-    margin-left: 1.8rem;
+    margin: 0 0.7rem;
     width: 9rem;
     height: 9rem;
     display: flex;

@@ -97,21 +97,26 @@ export const ContentInfo = styled.div`
 `
 
 export const Glass = styled.div`
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  bottom: -1%;
-  right: 0%;
-  background: linear-gradient(
-    45deg,
-    #fff,
-    rgba(7, 154, 207, 0.5) 20%,
-    rgba(4, 77, 104, 0.5) 30%,
-    hsla(0, 0%, 100%, 0.5) 50%,
-    rgba(4, 77, 104, 0.5) 85%,
-    #fff
-  );
-  z-index: -5;
+  ${({ theme }) => css`
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    bottom: -1%;
+    right: 0%;
+    background: linear-gradient(
+      45deg,
+      #fff,
+      rgba(7, 154, 207, 0.5) 20%,
+      rgba(4, 77, 104, 0.5) 30%,
+      hsla(0, 0%, 100%, 0.5) 50%,
+      rgba(4, 77, 104, 0.5) 85%,
+      #fff
+    );
+    ${media.lessThan('medium')`
+    border-bottom: 0.1rem solid ${theme.colors.primary}
+  `}
+    z-index: -5;
+  `}
 `
 
 export const BorderContent = styled.div`
