@@ -1,6 +1,7 @@
 import * as S from './styles'
 
 export type ProjectCardProps = {
+  slug: string
   image: string
   name: string
   description: string

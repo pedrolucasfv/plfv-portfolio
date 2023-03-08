@@ -97,27 +97,13 @@ export const MenuLink = styled.div`
     margin: 0.3rem 1rem 0;
     padding: 1.8rem 2rem;
     cursor: pointer;
-    animation: menu-back 0.4s forwards;
-    @keyframes menu-back {
-      0% {
-        letter-spacing: 0.6rem;
-      }
-      100% {
-        letter-spacing: 0.2rem;
-      }
-    }
+    transition: letter-spacing 0.4s;
+    letter-spacing: 0.2rem;
+
     &:hover {
       font-weight: ${theme.font.bold};
       color: ${theme.colors.white};
-      animation: menu-item 0.2s forwards;
-      @keyframes menu-item {
-        0% {
-          letter-spacing: 0.2rem;
-        }
-        100% {
-          letter-spacing: 0.6rem;
-        }
-      }
+      letter-spacing: 0.6rem;
     }
   `}
 `

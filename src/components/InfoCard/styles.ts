@@ -80,30 +80,12 @@ export const Button = styled.a`
     background-image: url('/img/background-interativo.gif');
     border: 0.2rem solid ${theme.colors.primary};
     cursor: pointer;
-    animation: go 0.4s forwards;
-    @keyframes button-back {
-      0% {
-        letter-spacing: 1rem;
-        padding: 1rem 2rem;
-      }
-      100% {
-        letter-spacing: 0.3rem;
-      }
-    }
-
+    transition: letter-spacing 0.4s;
+    letter-spacing: 0.3rem;
     &:hover {
       font-weight: ${theme.font.bold};
       color: ${theme.colors.white};
-      animation: button 0.4s forwards;
-      @keyframes button {
-        0% {
-          letter-spacing: 0.3rem;
-        }
-        100% {
-          letter-spacing: 1rem;
-          padding: 1rem 2rem;
-        }
-      }
+      letter-spacing: 1rem;
     }
   `}
 `

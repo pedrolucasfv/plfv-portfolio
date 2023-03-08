@@ -24,7 +24,9 @@ export const Container = styled.div`
   `}
 `
 
-export const ProjectCard = styled.div``
+export const ProjectCard = styled.a`
+  text-decoration: none;
+`
 
 export const Glass = styled.div`
   ${({ theme }) => css`

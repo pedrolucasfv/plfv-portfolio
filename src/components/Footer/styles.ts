@@ -99,10 +99,14 @@ export const Icon = styled.a`
     background: ${theme.gradients.top.darkBg};
     cursor: pointer;
     z-index: 1;
+    transition: background-color 1s;
+
     svg {
       color: white;
       height: 4rem;
       width: 4rem;
+      transition: width 0.4s;
+      transition: height 0.4s;
     }
     :hover {
       background: ${theme.gradients.top.blueBg};
