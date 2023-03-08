@@ -9,15 +9,19 @@ export const Wrapper = styled.menu`
     align-items: center;
     padding: 0 5rem;
     position: relative;
-    ${media.greaterThan('medium')`
-      justify-content: space-between;
-    `}
+
     height: 6rem;
     border-bottom: 0.3rem solid ${theme.colors.primary};
     border-left: 0.3rem solid ${theme.colors.primary};
     border-right: 0.3rem solid ${theme.colors.primary};
     border-bottom-left-radius: 0.7em;
     border-bottom-right-radius: 0.7rem;
+    ${media.greaterThan('medium')`
+      justify-content: space-between;
+    `}
+    ${media.lessThan('medium')`
+    padding: 0 1rem;
+  `}
   `}
 `
 export const LogoWrapper = styled.div`

@@ -26,6 +26,11 @@ export const Title = styled.h3`
     @media (min-width: 1500px) {
       font-size: 8.5rem;
     }
+    ${media.lessThan('medium')`
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  `}
   `}
 `
 export const Description = styled.h3`
@@ -40,6 +45,12 @@ export const Description = styled.h3`
     @media (min-width: 1500px) {
       font-size: 4.5rem;
     }
+    ${media.lessThan('medium')`
+    font-size: 2rem;
+    width: 30rem;
+    text-align: center;
+
+  `}
   `}
 `
 export const Text = styled.h3`
@@ -53,8 +64,12 @@ export const Text = styled.h3`
     ${media.lessThan('huge')`
     @media (min-width: 1500px) {
       font-size: 12rem;
-
     }
+    ${media.lessThan('medium')`
+    font-size: 5rem;
+    width: 30rem;
+    text-align: center;
+  `}
   `}
   `}
 `

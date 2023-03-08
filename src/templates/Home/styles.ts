@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components'
-import { Wrapper as MenuWrapper } from 'components/Menu/styles'
+import {
+  Wrapper as MenuWrapper,
+  LogoWrapper as LogoMenu
+} from 'components/Menu/styles'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   .fix {
@@ -18,7 +22,11 @@ export const Wrapper = styled.main`
       border-left: none;
       border-right: none;
     }
-
+    ${LogoMenu} {
+      ${media.lessThan('medium')`
+      margin-left: 45%;    
+    `}
+    }
     position: fixed;
     top: 0;
     z-index: 10;
