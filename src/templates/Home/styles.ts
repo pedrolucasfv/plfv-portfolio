@@ -56,22 +56,16 @@ export const Menu = styled.div`
     margin-left: 23%;
   `}
 `
-type ImageProps = {
-  src: string
-}
-
-export const Background = styled.div<ImageProps>`
-  ${({ src }) => css`
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    bottom: 0%;
-    right: 0%;
-    z-index: -10;
-    background: url(${src});
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-  `}
+export const Background = styled.div`
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  z-index: -10;
+  background: url('/img/background-interativo.gif');
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 `

@@ -2,6 +2,9 @@ import InfoCard from 'components/InfoCard'
 import PageSection from 'templates/PageSection'
 import * as S from './styles'
 import { Book } from '@styled-icons/ionicons-solid/Book'
+import { Download } from '@styled-icons/ionicons-solid/Download'
+import { Rocket } from '@styled-icons/ionicons-solid/Rocket'
+
 import Divider from 'components/Divider'
 
 const AboutMe = () => {
@@ -15,7 +18,7 @@ const AboutMe = () => {
     ]
   }
   const skillsCard = {
-    icon: <Book size={20} />,
+    icon: <Rocket size={20} />,
     title: 'Conhecimentos',
     items: [
       'Typescript, Javascript, Html, Css',
@@ -27,7 +30,7 @@ const AboutMe = () => {
     ]
   }
   const Resume = {
-    icon: <Book size={20} />,
+    icon: <Download size={20} />,
     title: 'Currículo'
   }
   return (

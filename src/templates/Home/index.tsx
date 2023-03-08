@@ -39,7 +39,7 @@ const Home = () => {
       <AboutMe />
       <Projects />
       <Footer />
-      <S.Background src="/img/background-interativo.gif" />
+      <S.Background />
     </S.Wrapper>
   )
 }
