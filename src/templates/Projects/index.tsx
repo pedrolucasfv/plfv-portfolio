@@ -79,8 +79,34 @@ const Projects = () => {
   const projectSelected = {
     deploy: 'https://www.linkedin.com/feed/',
     github: 'https://pedrolucasfv.github.io/',
-    description:
-      'Em 2020 eu fazia parte do time de robótica da universidade, estávamos em pandemia e sem aulas. Então eu e mais 4 amigos do time de robótica resolvemos nos increver em uma hackathon, uma maratona de programação organizada pelos alunos da USP na semana de engenharia da computação (SEnC). O desafio era fazer uma aplicação mobile que influenciasse na melhora do ensino da faculdade. Tivemos um brainstorm, colocamos todas as ideias no papel e chegamos a conclusão que o melhor seria uma espécie de "rede social de projetos", onde os professores podiam postar projetos no feed e os alunos se conectarem aos projetos, já que não existia essa conexão de Aluno e Professor. Fizemos a aplicação usando React Native e Expo, e nessa época, ninguém do grupo sabia JavaScript, já que os integrantes focavam em eletrônicos. Passamos um final de semana aprendendo tecnologia nova e aplicando, programando semepre juntos no discord, foi muito divertido, um clima super agradável e nem sentíamos o cansaço. Fomos premiados com a primeira colocação, que foi uma surpresa na equipe, mas que quando analisamos todo o processo, foi muito merecido por todos.',
+    description: (
+      <text>
+        <p>
+          Em 2020 eu fazia parte do time de robótica da universidade, estávamos
+          em pandemia e sem aulas. Então eu e mais 4 amigos do time de robótica
+          resolvemos nos increver em uma hackathon, uma maratona de programação
+          organizada pelos alunos da USP na semana de engenharia da computação
+          (SEnC). O desafio era fazer uma aplicação mobile que influenciasse na
+          melhora do ensino da faculdade.
+        </p>
+        <p>
+          Tivemos um brainstorm, colocamos todas as ideias no papel e chegamos a
+          conclusão que o melhor seria uma espécie de rede social de projetos,
+          onde os professores podiam postar projetos no feed e os alunos se
+          conectarem aos projetos, já que não existia essa conexão de Aluno e
+          Professor.
+        </p>
+        <p>
+          Fizemos a aplicação usando React Native e Expo, e nessa época, ninguém
+          do grupo sabia JavaScript, já que os integrantes focavam em
+          eletrônicos. Passamos um final de semana aprendendo tecnologia nova e
+          aplicando, programando semepre juntos no discord, foi muito divertido,
+          um clima super agradável e nem sentíamos o cansaço. Fomos premiados
+          com a primeira colocação, que foi uma surpresa na equipe, mas que
+          quando analisamos todo o processo, foi muito merecido por todos.
+        </p>
+      </text>
+    ),
     name: 'Pinça-me',
     image: '/img/pincame-print.png',
     items: ['React Native', 'Expo CLI', 'Javascript', 'CSS']

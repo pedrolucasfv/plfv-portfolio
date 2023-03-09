@@ -3,10 +3,17 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   width: 75%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  grid-template-rows: 1fr 1fr;
 `
-
+export const Media = styled.div`
+  grid-column: 2/5;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+`
 type ImageProps = {
   src: string
 }
@@ -21,28 +28,22 @@ export const Image = styled.div<ImageProps>`
     border-radius: 0.8rem;
   `}
 `
-export const UpContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
 
 export const Buttons = styled.div`
+  grid-row: 1;
+  grid-column: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `
-export const DownContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 10rem 0;
-`
 
 export const Description = styled.h5`
   ${({ theme }) => css`
+    grid-row: 2;
+    grid-column: 2/5;
     font-size: ${theme.font.sizes.xlarge};
     color: ${theme.colors.gray};
     font-weight: 500;
-    width: 50%;
     text-align: justify;
     margin-top: 3rem;
 

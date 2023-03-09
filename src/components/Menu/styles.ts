@@ -99,9 +99,9 @@ export const MenuLink = styled.div`
     cursor: pointer;
     transition: letter-spacing 0.4s;
     letter-spacing: 0.2rem;
-
+    font-weight: 600;
     &:hover {
-      font-weight: ${theme.font.bold};
+      font-weight: 800;
       color: ${theme.colors.white};
       letter-spacing: 0.6rem;
     }
