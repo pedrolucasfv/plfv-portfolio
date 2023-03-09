@@ -44,6 +44,7 @@ export const Background = styled.div`
   -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
   clip-path: polygon(50% 30%, 0 0, 100% 0);
 `
+
 export const BorderWindow = styled.div`
   ${({ theme }) => css`
     position: relative;

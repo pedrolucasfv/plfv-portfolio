@@ -1,7 +1,9 @@
 import Divider from 'components/Divider'
 import MediaMatch from 'components/MediaMatch'
 import ProjectCard from 'components/ProjectCard'
+import { useState } from 'react'
 import PageSection from 'templates/PageSection'
+import ProjectPage from 'templates/ProjectPage'
 import * as S from './styles'
 
 const Projects = () => {
@@ -62,9 +64,38 @@ const Projects = () => {
       image: '/img/pincame-print.png'
     }
   ]
+  const [isDeepFall, setIsDeepFall] = useState(false)
+  const [isGlassMove, setIsGlassMove] = useState(false)
+  const [projectSelected, setProjectSelected] = useState({
+    deploy: 'https://www.linkedin.com/feed/',
+    github: 'https://pedrolucasfv.github.io/',
+    description:
+      'Em 2020 eu fazia parte do time de robótica da universidade, estávamos em pandemia e sem aulas. Então eu e mais 4 amigos do time de robótica resolvemos nos increver em uma hackathon, uma maratona de programação organizada pelos alunos da USP na semana de engenharia da computação (SEnC). O desafio era fazer uma aplicação mobile que influenciasse na melhora do ensino da faculdade. Tivemos um brainstorm, colocamos todas as ideias no papel e chegamos a conclusão que o melhor seria uma espécie de "rede social de projetos", onde os professores podiam postar projetos no feed e os alunos se conectarem aos projetos, já que não existia essa conexão de Aluno e Professor. Fizemos a aplicação usando React Native e Expo, e nessa época, ninguém do grupo sabia JavaScript, já que os integrantes focavam em eletrônicos. Passamos um final de semana aprendendo tecnologia nova e aplicando, programando semepre juntos no discord, foi muito divertido, um clima super agradável e nem sentíamos o cansaço. Fomos premiados com a primeira colocação, que foi uma surpresa na equipe, mas que quando analisamos todo o processo, foi muito merecido por todos.',
+    name: 'Pinça-me',
+    image: '/img/pincame-print.png',
+    items: ['React Native', 'Expo CLI', 'Javascript', 'CSS']
+  })
+
+  const pickProject = () => {
+    setIsDeepFall(true)
+    setIsGlassMove(true)
+    setTimeout(() => setIsGlassMove(false), 2000)
+    setTimeout(() => setIsDeepFall(false), 3000)
+
+    setProjectSelected({
+      deploy: 'https://www.linkedin.com/feed/',
+      github: 'https://pedrolucasfv.github.io/',
+      description:
+        'Em 2020 eu fazia parte do time de robótica da universidade, estávamos em pandemia e sem aulas. Então eu e mais 4 amigos do time de robótica resolvemos nos increver em uma hackathon, uma maratona de programação organizada pelos alunos da USP na semana de engenharia da computação (SEnC). O desafio era fazer uma aplicação mobile que influenciasse na melhora do ensino da faculdade. Tivemos um brainstorm, colocamos todas as ideias no papel e chegamos a conclusão que o melhor seria uma espécie de "rede social de projetos", onde os professores podiam postar projetos no feed e os alunos se conectarem aos projetos, já que não existia essa conexão de Aluno e Professor. Fizemos a aplicação usando React Native e Expo, e nessa época, ninguém do grupo sabia JavaScript, já que os integrantes focavam em eletrônicos. Passamos um final de semana aprendendo tecnologia nova e aplicando, programando semepre juntos no discord, foi muito divertido, um clima super agradável e nem sentíamos o cansaço. Fomos premiados com a primeira colocação, que foi uma surpresa na equipe, mas que quando analisamos todo o processo, foi muito merecido por todos.',
+      name: 'Pinça-me',
+      image: '/img/pincame-print.png',
+      items: ['React Native', 'Expo CLI', 'Javascript', 'CSS']
+    })
+  }
+
   return (
     <S.Wrapper>
-      <S.Container>
+      <S.Container isDeepFall={isDeepFall}>
         <Divider />
         <PageSection title="Projetos">
           <S.Content>
@@ -76,9 +107,15 @@ const Projects = () => {
           </S.Content>
         </PageSection>
       </S.Container>
+      <S.Container isDeepFall={isDeepFall}>
+        <Divider />
+        <PageSection title={projectSelected.name}>
+          <ProjectPage {...projectSelected} />
+        </PageSection>
+      </S.Container>
       <MediaMatch greaterThan="medium">
-        <S.Glass />
-        <S.RiverSide />
+        <S.Glass isAnimation={isGlassMove} />
+        <S.RiverSide onClick={() => pickProject()} />
       </MediaMatch>
     </S.Wrapper>
   )

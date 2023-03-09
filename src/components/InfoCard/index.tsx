@@ -1,12 +1,13 @@
 import * as S from './styles'
 
 export type InfoCardProps = {
-  icon: JSX.Element
-  title: string
+  icon?: JSX.Element
+  title?: string
   items?: string[]
+  titleButton?: string
 }
 
-const InfoCard = ({ icon, items, title }: InfoCardProps) => (
+const InfoCard = ({ icon, items, title, titleButton }: InfoCardProps) => (
   <S.Wrapper>
     <S.Content>
       <S.Icon>{icon}</S.Icon>
@@ -19,7 +20,7 @@ const InfoCard = ({ icon, items, title }: InfoCardProps) => (
         </S.Items>
       ) : (
         <S.Button href="/resume/Pedro_Lucas_FV_currículo.pdf" download>
-          Download
+          {titleButton ? titleButton : 'Download'}
         </S.Button>
       )}
     </S.Content>
