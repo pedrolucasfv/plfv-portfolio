@@ -19,22 +19,50 @@ export const Content = styled.div`
 `
 type AnimeContainerProps = {
   isDeepFall: boolean
+  isSkyFall: boolean
+  isShow: boolean
 }
 
 export const Container = styled.div<AnimeContainerProps>`
-  ${({ isDeepFall }) => css`
+  ${({ isDeepFall, isSkyFall, isShow }) => css`
     ${media.greaterThan('medium')`
     -webkit-clip-path: polygon(0 0, 78% 0, 78% 100%, 0% 100%);
      clip-path: polygon(0 0, 78% 0, 78% 100%, 0% 100%);
   `}
     opacity: 1;
+    transform: perspective(500px) translateZ(0px);
     width: 100%;
     transition: transform 1.5s, opacity 1.9s;
-    transform: perspective(500px) translateZ(0px);
     ${isDeepFall &&
     css`
-      opacity: 0.3;
-      transform: perspective(500px) translateZ(-100px);
+      animation: cai 1s forwards;
+      @keyframes cai {
+        from {
+          opacity: 1;
+          transform: perspective(500px) translateZ(0px);
+        }
+        to {
+          opacity: 0.3;
+          transform: perspective(500px) translateZ(-100px);
+        }
+      }
+    `}
+    ${isSkyFall &&
+    css`
+      animation: bounce 1s forwards;
+      @keyframes bounce {
+        from {
+          display: block;
+          transform: perspective(500px) translateZ(500px);
+        }
+        to {
+          transform: perspective(500px) translateZ(0px);
+        }
+      }
+    `}
+    ${isShow &&
+    css`
+      display: none;
     `}
   `}
 `
