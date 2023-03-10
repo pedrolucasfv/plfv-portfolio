@@ -88,10 +88,10 @@ const Projects = () => {
         700
       )
       setTimeout(() => setIsGlassMove(false), 2000)
-      setTimeout(() => setDisplay({ projects: false, project: true }), 3000)
+      setTimeout(() => setDisplay({ projects: false, project: true }), 3500)
       setTimeout(
         () => setSkyFall({ isSkyFallProjects: false, isSkyFallProject: true }),
-        3000
+        3500
       )
     } else if (isProject) {
       setIsGlassMove(true)

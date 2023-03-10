@@ -13,14 +13,31 @@ export type ProjectPageProps = {
   items: string[]
 }
 
-const ProjectPage = ({ description, image, items }: ProjectPageProps) => {
+const ProjectPage = ({
+  description,
+  image,
+  items,
+  deploy,
+  notion,
+  github
+}: ProjectPageProps) => {
   return (
     <S.Wrapper>
       <S.LeftContent>
         <S.Buttons>
-          <InfoCard titleButton="Deploy" icon={<Desktop />} />
-          <InfoCard titleButton="Github" icon={<LogoGithub />} />
-          <InfoCard titleButton="Github" icon={<LogoGithub />} />
+          {deploy && (
+            <InfoCard titleButton="Deploy" icon={<Desktop />} link={deploy} />
+          )}
+          {notion && (
+            <InfoCard titleButton="Notion" icon={<Document />} link={notion} />
+          )}
+          {github && (
+            <InfoCard
+              titleButton="Github"
+              icon={<LogoGithub />}
+              link={github}
+            />
+          )}
         </S.Buttons>
         <InfoCard title="Tecnologias" icon={<Document />} items={items} />
       </S.LeftContent>

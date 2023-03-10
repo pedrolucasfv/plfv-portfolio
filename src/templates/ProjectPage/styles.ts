@@ -61,12 +61,16 @@ export const Description = styled.h5`
     text-align: center;
     ${media.lessThan('medium')`
     width: 30rem;
-    font-size: ${theme.font.sizes.large};
-    margin-left: 5rem;
+    font-size: ${theme.font.sizes.medium};
+    margin-left: 4rem;
     text-align: start;
     `}
     p {
       margin-bottom: 2rem;
+    }
+    @media (max-width: 380px) {
+      margin-left: 3rem;
+      max-width: 27rem;
     }
   `}
 `

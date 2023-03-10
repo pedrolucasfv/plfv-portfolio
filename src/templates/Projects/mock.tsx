@@ -8,6 +8,8 @@ export default [
       image: '/img/audiophile-print.png'
     },
     project: {
+      notion:
+        'https://www.notion.so/pedrolucasfv/Audiophile-ecommerce-5c4533fd917b48f5b81da6e81642dcea',
       deploy: 'https://audiophile-ecommerce-ols5.vercel.app/',
       github: 'https://github.com/pedrolucasfv/audiophile-ecommerce',
       description: (
@@ -104,6 +106,8 @@ export default [
       image: '/img/rps-print.png'
     },
     project: {
+      notion:
+        'https://www.notion.so/pedrolucasfv/RPS-game-5160a492106c4e62a94311c171188a35',
       deploy: 'https://rps-game-livid.vercel.app/',
       github: 'https://github.com/pedrolucasfv/rps-game',
       description: (
@@ -153,6 +157,8 @@ export default [
       image: '/img/restcountriesapi-print.png'
     },
     project: {
+      notion:
+        'https://www.notion.so/pedrolucasfv/REST-COUNTRIES-API-6305992152264f339868919a61da23e2',
       deploy: 'https://rest-countries-api-vafe.vercel.app/',
       github: 'https://github.com/pedrolucasfv/rest-countries-api',
       description: (
@@ -206,6 +212,8 @@ export default [
       image: '/img/spotifyweb-print.png'
     },
     project: {
+      notion:
+        'https://www.notion.so/pedrolucasfv/Spotify-Web-Page-b7a11fc3d7b640c1bb216ed475ec09ab',
       github: 'https://github.com/pedrolucasfv/spotify-web',
       description: (
         <text>
@@ -260,6 +268,8 @@ export default [
       image: '/img/landingpageskeleton-print.png'
     },
     project: {
+      notion:
+        'https://www.notion.so/pedrolucasfv/Landing-Page-Skeleton-26cd9985719146f79a9ed6cd70279c80',
       github: 'https://github.com/pedrolucasfv/landing-page-skeleton',
       description: (
         <text>

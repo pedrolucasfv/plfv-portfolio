@@ -5,9 +5,18 @@ export type InfoCardProps = {
   title?: string
   items?: string[]
   titleButton?: string
+  link?: string
+  download?: boolean
 }
 
-const InfoCard = ({ icon, items, title, titleButton }: InfoCardProps) => (
+const InfoCard = ({
+  icon,
+  items,
+  title,
+  titleButton,
+  link = '/',
+  download = false
+}: InfoCardProps) => (
   <S.Wrapper>
     <S.Content>
       <S.Icon>{icon}</S.Icon>
@@ -19,9 +28,17 @@ const InfoCard = ({ icon, items, title, titleButton }: InfoCardProps) => (
           ))}
         </S.Items>
       ) : (
-        <S.Button href="/resume/Pedro_Lucas_FV_currículo.pdf" download>
-          {titleButton ? titleButton : 'Download'}
-        </S.Button>
+        <>
+          {download ? (
+            <S.Button href={link} download>
+              {titleButton}
+            </S.Button>
+          ) : (
+            <S.Button href={link} target="_blank">
+              {titleButton}
+            </S.Button>
+          )}
+        </>
       )}
     </S.Content>
   </S.Wrapper>

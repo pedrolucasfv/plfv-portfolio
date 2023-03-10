@@ -31,7 +31,10 @@ const AboutMe = () => {
   }
   const Resume = {
     icon: <Download size={20} />,
-    title: 'Currículo'
+    title: 'Currículo',
+    titleButton: 'DOWNLOAD',
+    link: '/resume/Pedro_Lucas_FV_currículo.pdf',
+    download: true
   }
   return (
     <S.Wrapper>
