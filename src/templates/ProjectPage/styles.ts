@@ -30,12 +30,13 @@ export const Image = styled.div<ImageProps>`
     border-radius: 0.8rem;
     ${media.greaterThan('medium')`
     height: 30rem;
-    width: 55rem;
+    width: 50rem;
     margin-left: 5rem;
     `}
     @media (min-width: 1500px) {
       height: 40rem;
       width: 70rem;
+      margin-left: 5rem;
     }
   `}
 `
@@ -49,11 +50,17 @@ export const Buttons = styled.div`
     width: 30rem;
   }
 `
+export const Technologies = styled.div`
+  ${InfoCardWrapper} {
+    margin-bottom: 5rem;
+    width: 30rem;
+  }
+`
 
 export const Description = styled.h5`
   ${({ theme }) => css`
     margin-top: 5rem;
-    margin-left: 7rem;
+    margin-left: 5rem;
 
     font-size: ${theme.font.sizes.xlarge};
     color: ${theme.colors.gray};
@@ -62,8 +69,9 @@ export const Description = styled.h5`
     ${media.lessThan('medium')`
     width: 30rem;
     font-size: ${theme.font.sizes.medium};
-    margin-left: 4rem;
     text-align: start;
+    margin-left: 4rem;
+
     `}
     p {
       margin-bottom: 2rem;

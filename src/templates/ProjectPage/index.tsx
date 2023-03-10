@@ -39,7 +39,9 @@ const ProjectPage = ({
             />
           )}
         </S.Buttons>
-        <InfoCard title="Tecnologias" icon={<Document />} items={items} />
+        <S.Technologies>
+          <InfoCard title="Tecnologias" icon={<Document />} items={items} />
+        </S.Technologies>
       </S.LeftContent>
       <S.RightContent>
         <S.Media>

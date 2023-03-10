@@ -32,10 +32,11 @@ export const Container = styled.div<AnimeContainerProps>`
     opacity: 1;
     transform: perspective(500px) translateZ(0px);
     width: 100%;
+
     ${isDeepFall &&
     css`
-      animation: cai 1.5s forwards;
-      @keyframes cai {
+      animation: deepfall 1.5s forwards;
+      @keyframes deepfall {
         from {
           opacity: 1;
           transform: perspective(500px) translateZ(0px);
@@ -48,8 +49,8 @@ export const Container = styled.div<AnimeContainerProps>`
     `}
     ${isSkyFall &&
     css`
-      animation: bounce 1s forwards;
-      @keyframes bounce {
+      animation: skyfall 1s forwards;
+      @keyframes skyfall {
         from {
           display: block;
           transform: perspective(500px) translateZ(500px);
