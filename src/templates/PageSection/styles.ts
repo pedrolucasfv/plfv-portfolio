@@ -45,6 +45,7 @@ export const Title = styled.h2`
   background-image: url('/img/background-interativo.gif');
   margin-bottom: 8rem;
   ${media.lessThan('medium')`
+  margin-left: 5rem;
   font-size: 4rem;
   `}
   @media (min-width: 1500px) {

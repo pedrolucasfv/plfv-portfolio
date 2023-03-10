@@ -149,10 +149,11 @@ export const Button = styled.div`
     text-transform: uppercase;
     font-weight: 600;
     background-image: url('/img/background-interativo.gif');
-    border: 0.2rem solid ${theme.colors.primary};
+    border: 0.3rem solid ${theme.colors.primary};
     cursor: pointer;
     transition: letter-spacing 0.4s;
     letter-spacing: 0.3rem;
+    border-radius: 0.7rem;
     &:hover {
       font-weight: ${theme.font.bold};
       color: ${theme.colors.white};

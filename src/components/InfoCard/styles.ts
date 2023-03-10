@@ -82,6 +82,8 @@ export const Button = styled.a`
     cursor: pointer;
     transition: letter-spacing 0.4s;
     letter-spacing: 0.3rem;
+    border-radius: 0.7rem;
+
     &:hover {
       font-weight: ${theme.font.bold};
       color: ${theme.colors.white};
