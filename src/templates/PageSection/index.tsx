@@ -10,7 +10,9 @@ const PageSection = ({ title, children }: PageSectionProps) => (
     <S.LeftContent></S.LeftContent>
     <S.RightContent></S.RightContent>
     <S.MainContent>
-      <S.Title>{title}</S.Title>
+      <S.TitleContent>
+        <S.Title>{title}</S.Title>
+      </S.TitleContent>
       <S.Children>{children}</S.Children>
     </S.MainContent>
   </S.Wrapper>

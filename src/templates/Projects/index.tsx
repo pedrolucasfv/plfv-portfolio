@@ -5,65 +5,19 @@ import { useState } from 'react'
 import PageSection from 'templates/PageSection'
 import ProjectPage from 'templates/ProjectPage'
 import * as S from './styles'
+import projectsMock from './mock'
+
+export type ProjectSelectedProps = {
+  name: string
+  image: string
+  description: React.ReactNode
+  deploy?: string
+  notion?: string
+  github: string
+  items: string[]
+}
 
 const Projects = () => {
-  const projects = [
-    {
-      slug: 'https://audiophile-ecommerce-ols5.vercel.app/',
-      description:
-        'Audiophile é uma e-commerce com páginas dinâmicas, testes unitários, hooks personalizados, componentes bem escaláveis e tudo bem documentado.',
-      name: 'Audiophile e-Commerce',
-      image: '/img/audiophile-print.png'
-    },
-    {
-      slug: 'https://ecommerce-product-page-vdsz.vercel.app/',
-      description:
-        'Uma página de produto de uma e-commerce, meu primeiro projeto feito em React, onde meu conhecimento não estava tão maduro.',
-      name: 'E-commerce product page',
-      image: '/img/ecommerceproductpage-print.png'
-    },
-    {
-      slug: 'https://rps-game-livid.vercel.app/',
-      description:
-        'Um jogo de JoKenPo para treinar bem a lógica e a criação de componentes através do storybook',
-      name: 'RPS-Game',
-      image: '/img/rps-print.png'
-    },
-    {
-      slug: 'https://rest-countries-api-vafe.vercel.app/',
-      description:
-        'Esse é um projeto de consulta a informação de países através de uma rest api.',
-      name: 'Rest Countries Api',
-      image: '/img/restcountriesapi-print.png'
-    },
-    {
-      slug: '/',
-      description: 'Esse é um projeto para fazer chamadas na Spotify API.',
-      name: 'Spotify Web Player',
-      image: '/img/spotifyweb-print.png'
-    },
-    {
-      slug: '/',
-      description:
-        'Una landing page dinâmica, onde o conteúdo de acordo com a necessidade acessando o /admin.',
-      name: 'Landing Page Skeleton',
-      image: '/img/landingpageskeleton-print.png'
-    },
-    {
-      slug: 'https://pedrolucasfv.github.io/calculator-app/',
-      description:
-        'Uma calculadora feita sem framework que tem a opção de mudar o tema.',
-      name: 'Calculator App',
-      image: '/img/calculatorapp-print.png'
-    },
-    {
-      slug: 'https://pedrolucasfv.github.io/',
-      description:
-        'Projeto que ganhou o primeiro lugar na hackathon SEnC 2020, feito por mim e mais quatro alunos.',
-      name: 'Pinça-me',
-      image: '/img/pincame-print.png'
-    }
-  ]
   const [deepFall, setDeepFall] = useState({
     isDeepFallProjects: false,
     isDeepFallProject: false
@@ -76,7 +30,7 @@ const Projects = () => {
   const [display, setDisplay] = useState({ projects: true, project: false })
 
   const [isGlassMove, setIsGlassMove] = useState(false)
-  const projectSelected = {
+  const [projectSelected, setProjectSelected] = useState<ProjectSelectedProps>({
     deploy: 'https://www.linkedin.com/feed/',
     github: 'https://pedrolucasfv.github.io/',
     description: (
@@ -110,9 +64,14 @@ const Projects = () => {
     name: 'Pinça-me',
     image: '/img/pincame-print.png',
     items: ['React Native', 'Expo CLI', 'Javascript', 'CSS']
-  }
+  })
 
-  const changePage = (isProjects: boolean, isProject: boolean) => {
+  const changePage = (
+    isProjects: boolean,
+    isProject: boolean,
+    project: ProjectSelectedProps = projectSelected
+  ) => {
+    setProjectSelected(project)
     setDeepFall({
       isDeepFallProjects: false,
       isDeepFallProject: false
@@ -164,12 +123,12 @@ const Projects = () => {
         <Divider />
         <PageSection title="Projetos">
           <S.Content>
-            {projects.map((project, index) => (
+            {projectsMock.map((project, index) => (
               <S.ProjectCard
-                onClick={() => changePage(true, false)}
+                onClick={() => changePage(true, false, project.project)}
                 key={index}
               >
-                <ProjectCard {...project} />
+                <ProjectCard {...project.projectCard} />
               </S.ProjectCard>
             ))}
           </S.Content>
@@ -183,12 +142,13 @@ const Projects = () => {
       >
         <Divider />
         <PageSection title={projectSelected.name}>
+          <S.Button onClick={() => changePage(false, true)}>VOLTAR</S.Button>
           <ProjectPage {...projectSelected} />
         </PageSection>
       </S.Container>
       <MediaMatch greaterThan="medium">
         <S.Glass isAnimation={isGlassMove} />
-        <S.RiverSide onClick={() => changePage(false, true)} />
+        <S.RiverSide />
       </MediaMatch>
     </S.Wrapper>
   )

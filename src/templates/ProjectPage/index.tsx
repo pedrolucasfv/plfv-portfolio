@@ -16,16 +16,20 @@ export type ProjectPageProps = {
 const ProjectPage = ({ description, image, items }: ProjectPageProps) => {
   return (
     <S.Wrapper>
-      <S.Buttons>
-        <InfoCard titleButton="Deploy" icon={<Desktop />} />
-        <InfoCard titleButton="Github" icon={<LogoGithub />} />
-        <InfoCard titleButton="Github" icon={<LogoGithub />} />
-      </S.Buttons>
-      <S.Media>
-        <S.Image src={image} />
-      </S.Media>
-      <InfoCard title="Tecnologias" icon={<Document />} items={items} />
-      <S.Description>{description}</S.Description>
+      <S.LeftContent>
+        <S.Buttons>
+          <InfoCard titleButton="Deploy" icon={<Desktop />} />
+          <InfoCard titleButton="Github" icon={<LogoGithub />} />
+          <InfoCard titleButton="Github" icon={<LogoGithub />} />
+        </S.Buttons>
+        <InfoCard title="Tecnologias" icon={<Document />} items={items} />
+      </S.LeftContent>
+      <S.RightContent>
+        <S.Media>
+          <S.Image src={image} />
+        </S.Media>
+        <S.Description>{description}</S.Description>
+      </S.RightContent>
     </S.Wrapper>
   )
 }

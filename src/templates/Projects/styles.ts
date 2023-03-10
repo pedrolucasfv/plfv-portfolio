@@ -32,10 +32,9 @@ export const Container = styled.div<AnimeContainerProps>`
     opacity: 1;
     transform: perspective(500px) translateZ(0px);
     width: 100%;
-    transition: transform 1.5s, opacity 1.9s;
     ${isDeepFall &&
     css`
-      animation: cai 1s forwards;
+      animation: cai 1.5s forwards;
       @keyframes cai {
         from {
           opacity: 1;
@@ -43,7 +42,7 @@ export const Container = styled.div<AnimeContainerProps>`
         }
         to {
           opacity: 0.3;
-          transform: perspective(500px) translateZ(-100px);
+          transform: perspective(500px) translateZ(-200px);
         }
       }
     `}
@@ -112,6 +111,9 @@ export const RiverSide = styled.div`
     width: 13%;
     border-top: 0.5rem solid ${theme.colors.primary};
     border-bottom: 0.5rem solid ${theme.colors.primary};
+    display: flex;
+    justify-content: center;
+    align-items: center;
   `}
 `
 
@@ -131,4 +133,30 @@ export const Background = styled.div`
   :hover {
     opacity: 1;
   }
+`
+
+export const Button = styled.div`
+  ${({ theme }) => css`
+    margin-left: 5rem;
+    width: 25rem;
+    margin-top: -25rem;
+    position: absolute;
+    padding: 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    font-size: ${theme.font.sizes.xxlarge};
+    color: ${theme.colors.white};
+    text-transform: uppercase;
+    font-weight: 600;
+    background-image: url('/img/background-interativo.gif');
+    border: 0.2rem solid ${theme.colors.primary};
+    cursor: pointer;
+    transition: letter-spacing 0.4s;
+    letter-spacing: 0.3rem;
+    &:hover {
+      font-weight: ${theme.font.bold};
+      color: ${theme.colors.white};
+      letter-spacing: 1rem;
+    }
+  `}
 `

@@ -29,11 +29,16 @@ export const MainContent = styled.div`
   grid-row: 1;
   grid-column: 1/3;
 `
-
-export const Title = styled.h2`
+export const TitleContent = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 8rem;
+  align-items: center;
+`
+
+export const Title = styled.h2`
+  max-width: 65rem;
+  text-align: center;
+  font-size: 6rem;
   text-transform: uppercase;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -42,6 +47,10 @@ export const Title = styled.h2`
   ${media.lessThan('medium')`
   font-size: 4rem;
   `}
+  @media (min-width: 1500px) {
+    font-size: 8rem;
+    max-width: 95rem;
+  }
 `
 
 export const Children = styled.div`
@@ -49,8 +58,8 @@ export const Children = styled.div`
   ${media.greaterThan('medium')`
   margin: 0 10rem;
 `}
-  ${media.greaterThan('huge')`
-  margin: 0 20rem;
-`}
+  @media (min-width: 1500px) {
+    margin: 0 20rem;
+  }
 `
 export const Image = styled.div``
