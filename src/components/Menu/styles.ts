@@ -7,7 +7,7 @@ export const Wrapper = styled.menu`
     background: ${theme.gradients.top.darkBg};
     display: flex;
     align-items: center;
-    padding: 0 5rem;
+    padding: 0 4rem;
     position: relative;
 
     height: 6rem;
@@ -91,7 +91,7 @@ export const MenuNav = styled.div`
 
 export const MenuLink = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.large};
+    font-size: ${theme.font.sizes.small};
     color: ${theme.colors.primary};
 
     margin: 0.3rem 1rem 0;
@@ -103,7 +103,7 @@ export const MenuLink = styled.div`
     &:hover {
       font-weight: 800;
       color: ${theme.colors.white};
-      letter-spacing: 0.6rem;
+      letter-spacing: 0.5rem;
     }
   `}
 `

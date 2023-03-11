@@ -32,7 +32,6 @@ export const Container = styled.div<AnimeContainerProps>`
     opacity: 1;
     transform: perspective(500px) translateZ(0px);
     width: 100%;
-
     ${isDeepFall &&
     css`
       animation: deepfall 1.5s forwards;
@@ -93,11 +92,12 @@ export const Glass = styled.div<AnimeGlassProps>`
       #fff
     );
     z-index: -9;
-    border-left: 0.1rem solid ${theme.colors.primary};
+    border-left: 0.5rem solid ${theme.colors.primary};
+
     transition: transform 1.2s;
     ${isAnimation &&
     css`
-      transform: rotateY(45deg);
+      transform: rotateY(60deg);
     `}
   `}
 `
@@ -110,6 +110,7 @@ export const RiverSide = styled.div`
     top: 0%;
     height: 100%;
     width: 13%;
+    border-left: 0.5rem solid ${theme.colors.primary};
     border-top: 0.5rem solid ${theme.colors.primary};
     border-bottom: 0.5rem solid ${theme.colors.primary};
     display: flex;
