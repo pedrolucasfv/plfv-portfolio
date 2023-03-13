@@ -55,21 +55,20 @@ export const Description = styled.h3`
 `
 export const Text = styled.h3`
   ${({ theme }) => css`
-    margin-top: 10rem;
+    mrgin-top: 6rem;
     font-size: 9rem;
     margin-left: ${theme.spacings.xsmall};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: url('/img/background-interativo2.gif');
-    ${media.lessThan('huge')`
     @media (min-width: 1500px) {
       font-size: 12rem;
+      margin-top: 10rem;
     }
     ${media.lessThan('medium')`
     font-size: 5rem;
     width: 30rem;
     text-align: center;
-  `}
   `}
   `}
 `
