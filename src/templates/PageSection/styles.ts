@@ -36,22 +36,25 @@ export const TitleContent = styled.div`
 `
 
 export const Title = styled.h2`
-  max-width: 65rem;
-  text-align: center;
-  font-size: 6rem;
-  text-transform: uppercase;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: url('/img/background-interativo.gif');
-  margin-bottom: 8rem;
-  ${media.lessThan('medium')`
+  ${({ theme }) => css`
+    max-width: 65rem;
+    text-align: center;
+    font-size: 6rem;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url('/img/background-interativo.gif');
+    -webkit-text-stroke: 0.3rem ${theme.colors.primary};
+    margin-bottom: 8rem;
+    ${media.lessThan('medium')`
   margin-left: 5rem;
   font-size: 4rem;
   `}
-  @media (min-width: 1500px) {
-    font-size: 8rem;
-    max-width: 90rem;
-  }
+    @media (min-width: 1500px) {
+      font-size: 8rem;
+      max-width: 90rem;
+    }
+  `}
 `
 
 export const Children = styled.div`
