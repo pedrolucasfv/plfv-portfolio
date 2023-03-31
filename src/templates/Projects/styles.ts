@@ -142,6 +142,9 @@ export const Button = styled.div`
     margin-left: 5rem;
     width: 25rem;
     margin-top: -25rem;
+    ${media.lessThan('medium')`
+    margin-top: -20rem;
+  `}
     position: absolute;
     padding: 1rem 4rem;
     display: flex;

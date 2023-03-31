@@ -45,6 +45,9 @@ export const Title = styled.h2`
     -webkit-text-fill-color: transparent;
     background-image: url('/img/background-interativo.gif');
     -webkit-text-stroke: 0.3rem ${theme.colors.primary};
+    ${media.lessThan('medium')`
+    -webkit-text-stroke: 0.2rem ${theme.colors.primary};
+  `}
     margin-bottom: 8rem;
     ${media.lessThan('medium')`
   margin-left: 5rem;

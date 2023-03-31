@@ -33,7 +33,8 @@ export const Image = styled.div<ImageProps>`
     width: 24rem;
     background: url(${src});
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     border: solid 0.2rem ${theme.colors.white};
     border-radius: 0.8rem;
   `}

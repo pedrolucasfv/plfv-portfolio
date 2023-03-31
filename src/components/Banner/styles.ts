@@ -19,7 +19,6 @@ export const Title = styled.h3`
   ${({ theme }) => css`
     margin-top: -3rem;
     letter-spacing: 0.3rem;
-
     font-size: 6.5rem;
     margin-left: ${theme.spacings.xsmall};
     color: ${theme.colors.white};
@@ -27,10 +26,15 @@ export const Title = styled.h3`
       font-size: 8.5rem;
     }
     ${media.lessThan('medium')`
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 4rem;
+    width: 30rem;
   `}
+    @media (max-width: 400px) {
+      font-size: 2.5rem;
+      width: 25rem;
+    }
   `}
 `
 export const Description = styled.h3`
@@ -46,29 +50,27 @@ export const Description = styled.h3`
       font-size: 4.5rem;
     }
     ${media.lessThan('medium')`
-    font-size: 2rem;
-    width: 30rem;
+    font-size: 1.5rem;
+    width: 25rem;
     text-align: center;
-
   `}
   `}
 `
 export const Text = styled.h3`
   ${({ theme }) => css`
-    mrgin-top: 6rem;
+    margin-top: 6rem;
     font-size: 9rem;
     margin-left: ${theme.spacings.xsmall};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: url('/img/background-interativo2.gif');
+    -webkit-text-stroke: 0.3rem ${theme.colors.primary};
+    background-image: url('/img/background-interativo.gif');
     @media (min-width: 1500px) {
       font-size: 12rem;
       margin-top: 10rem;
     }
     ${media.lessThan('medium')`
-    font-size: 5rem;
-    width: 30rem;
-    text-align: center;
+    opacity: 0;
   `}
   `}
 `
@@ -123,6 +125,9 @@ export const BorderContent = styled.div`
     position: relative;
     width: 100%;
     height: 101vh;
+    ${media.lessThan('medium')`
+    height: 65vh;
+  `}
     background: ${theme.colors.primary};
     -webkit-clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
     clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
