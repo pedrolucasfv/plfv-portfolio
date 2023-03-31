@@ -6,6 +6,7 @@ import PageSection from 'templates/PageSection'
 import ProjectPage from 'templates/ProjectPage'
 import * as S from './styles'
 import projectsMock from './mock'
+import { Link } from 'react-scroll'
 
 export type ProjectSelectedProps = {
   name: string
@@ -104,12 +105,20 @@ const Projects = () => {
         <PageSection title="Projetos">
           <S.Content>
             {projectsMock.map((project, index) => (
-              <S.ProjectCard
-                onClick={() => changePage(true, false, project.project)}
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-117}
+                duration={500}
                 key={index}
               >
-                <ProjectCard {...project.projectCard} />
-              </S.ProjectCard>
+                <S.ProjectCard
+                  onClick={() => changePage(true, false, project.project)}
+                >
+                  <ProjectCard {...project.projectCard} />
+                </S.ProjectCard>
+              </Link>
             ))}
           </S.Content>
         </PageSection>

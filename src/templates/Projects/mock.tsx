@@ -398,5 +398,94 @@ export default [
       image: '/img/pincame-print.png',
       items: ['React Native', 'Expo CLI', 'Javascript', 'CSS']
     }
+  },
+  {
+    projectCard: {
+      slug: 'https://pedrolucasfv.github.io/',
+      description:
+        'Projeto feito para aumentar o alcance de uma empresa que reboca veículos.',
+      name: 'RF-Reboque',
+      image: '/img/rfreboque-print.png'
+    },
+    project: {
+      deploy: 'https://www.rfreboque.com.br/',
+      github: 'https://github.com/pedrolucasfv/rf-reboque',
+      description: (
+        <text>
+          <p>
+            O responsável da empresa queria uma página muito simples, com foco
+            no mobile. Ele queria que a preocupação maior fosse em SEO, que o
+            cliente pesquisasse as palavras chaves no google e achasse a
+            empresa.
+          </p>
+          <p>
+            Pensando nisso, como já estava acostumado, desenvolvi em NextJs
+            mesmo, que tem uma boa aplicação de SEO. Ativei o domínio próprio e
+            fiz o mapeameeto no Google Search Console, para indexar e mostrar as
+            robores do google que o site está ali. Aproveitei a estrutura do meu
+            projeto Landing Page Skeleton e apliquei alguns detalhes que estão
+            virando minha marca, como o fundo fixo com as palavras RF reboque.
+          </p>
+          <p>
+            Esse projeto me ensinou mais coisas por fora da programação, como a
+            colocar uma aplicação 100% em produção e a saber dos mecanismos de
+            divulgação que o google proporciona.
+          </p>
+        </text>
+      ),
+      name: 'RF-REBOQUE',
+      image: '/img/rfreboque-print.png',
+      items: [
+        'Typescript, React',
+        'NextJS: usei para melhorar o SEO',
+        'Styled-components: usei para criar opções para mudança nos componentes, aumentando a escalabilidade'
+      ]
+    }
+  },
+  {
+    projectCard: {
+      slug: 'https://pedrolucasfv.github.io/',
+      description:
+        'Esse foi um projeto social que decidi fazer para ajudar alguma instituição de caridade a aumentar o número de doaçõeos',
+      name: 'Projeto A Rede',
+      image: '/img/projetoarede-print.png'
+    },
+    project: {
+      deploy: 'https://www.projetoarede.com.br/',
+      github: 'https://github.com/pedrolucasfv/projeto-a-rede',
+      description: (
+        <text>
+          <p>
+            Quando a gente ta desenvolvendo projetos para portfólio, a gente
+            esbarra no problema de ideias, mas aí pensei, por que não fazer para
+            uma instiuição de caridade? Foi aí que conheci o Projeto A Rede, uma
+            ONG que ajuda crianças e a população local a ter uma melhor
+            qualidade de vida.
+          </p>
+          <p>
+            Eu adorei fazer esse projeto pela motivação e porque o responsável
+            me deu liberdade criativa, pude aplicar bem minha cara ao projeto,
+            colocando algumas animações para treinar meu css. Além disso, eu
+            pude treinar mais ainda como é a relação com um cliente, prazos e
+            pós produção, exatamente como funciona o mercado.
+          </p>
+          <p>
+            Eu escondi a minha logo no site, para quem gosta de EasterEggs, é
+            legal pra procurar, e ainda tem uma recompensa se achar. Também
+            convido a você a doar R$1, R$2, R$5 reais para eles, pois quando
+            muitas pessoas doam um valor baixo, se torna um valor gigante para
+            as crianças. PIX CNPJ: 40 291 675 0001 51 - Missão Urbana A Rede -
+            Banco: Sicred
+          </p>
+        </text>
+      ),
+      name: 'Projeto A Rede',
+      image: '/img/projetoarede-print.png',
+      items: [
+        'Typescript, React',
+        'NextJS: usei para melhorar o SEO',
+        'Styled-components: usei para criar opções para mudança nos componentes, aumentando a escalabilidade'
+      ]
+    }
   }
 ]

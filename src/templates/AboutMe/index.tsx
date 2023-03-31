@@ -26,6 +26,7 @@ const AboutMe = () => {
       'Styled-Components',
       'Storybook',
       'GraphQl, StrapiCMS',
+      'NodeJS, Express',
       'Experiência básica com Java, C, C# (Unity3D), React Native, Arduíno e afins '
     ]
   }
