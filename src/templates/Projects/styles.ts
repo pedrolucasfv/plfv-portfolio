@@ -139,12 +139,16 @@ export const Background = styled.div`
 
 export const Button = styled.div`
   ${({ theme }) => css`
-    margin-left: 5rem;
+    margin-left: 12rem;
     width: 25rem;
-    margin-top: -25rem;
+    margin-top: -5rem;
     ${media.lessThan('medium')`
-    margin-top: -20rem;
+    margin-top: -7rem;
+    margin-left: 10rem;
   `}
+    @media (min-width: 1500px) {
+      margin-left: 25rem;
+    }
     position: absolute;
     padding: 1rem 4rem;
     display: flex;

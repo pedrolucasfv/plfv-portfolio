@@ -130,8 +130,8 @@ const Projects = () => {
         id="containerProject"
       >
         <Divider />
+        <S.Button onClick={() => changePage(false, true)}>VOLTAR</S.Button>
         <PageSection title={projectSelected.name}>
-          <S.Button onClick={() => changePage(false, true)}>VOLTAR</S.Button>
           <ProjectPage {...projectSelected} />
         </PageSection>
       </S.Container>
