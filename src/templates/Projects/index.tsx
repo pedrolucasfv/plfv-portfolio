@@ -2,11 +2,11 @@ import Divider from 'components/Divider'
 import MediaMatch from 'components/MediaMatch'
 import ProjectCard from 'components/ProjectCard'
 import { useState } from 'react'
+import { Link } from 'react-scroll'
 import PageSection from 'templates/PageSection'
 import ProjectPage from 'templates/ProjectPage'
-import * as S from './styles'
 import projectsMock from './mock'
-import { Link } from 'react-scroll'
+import * as S from './styles'
 
 export type ProjectSelectedProps = {
   name: string
@@ -109,7 +109,7 @@ const Projects = () => {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-117}
+                offset={-50}
                 duration={500}
                 key={index}
               >
