@@ -1,9 +1,9 @@
-import InfoCard from 'components/InfoCard'
-import PageSection from 'templates/PageSection'
-import * as S from './styles'
 import { Book } from '@styled-icons/ionicons-solid/Book'
 import { Download } from '@styled-icons/ionicons-solid/Download'
 import { Rocket } from '@styled-icons/ionicons-solid/Rocket'
+import InfoCard from 'components/InfoCard'
+import PageSection from 'templates/PageSection'
+import * as S from './styles'
 
 import Divider from 'components/Divider'
 
@@ -37,6 +37,13 @@ const AboutMe = () => {
     link: '/resume/Pedro_Lucas_FV_currículo.pdf',
     download: true
   }
+  const Notion = {
+    icon: <Book size={20} />,
+    title: 'Documentação',
+    titleButton: 'Notion',
+    link: 'https://www.notion.so/pedrolucasfv/925adc68502546b28222b6cf330a25c1?v=9469121632cd48778dfcb1b39012a2ec',
+    download: true
+  }
   return (
     <S.Wrapper>
       <Divider />
@@ -51,6 +58,9 @@ const AboutMe = () => {
             </S.Card>
             <S.Card>
               <InfoCard {...Resume} />
+            </S.Card>
+            <S.Card>
+              <InfoCard {...Notion} />
             </S.Card>
           </S.LeftContent>
           <S.RightContent>
