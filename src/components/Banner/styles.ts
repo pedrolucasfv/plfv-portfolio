@@ -63,8 +63,8 @@ export const Text = styled.h3`
     margin-left: ${theme.spacings.xsmall};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.3rem ${theme.colors.primary};
-    background-image: url('/img/background-interativo.gif');
+    -webkit-text-stroke: 0.2rem ${theme.colors.white};
+    background-image: ${theme.gradients.top.blueBg};
     @media (min-width: 1500px) {
       font-size: 12rem;
       margin-top: 10rem;

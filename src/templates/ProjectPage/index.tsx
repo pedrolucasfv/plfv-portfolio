@@ -1,8 +1,9 @@
-import InfoCard from 'components/InfoCard'
-import * as S from './styles'
+import { Desktop } from '@styled-icons/ionicons-solid/Desktop'
 import { Document } from '@styled-icons/ionicons-solid/Document'
 import { LogoGithub } from '@styled-icons/ionicons-solid/LogoGithub'
-import { Desktop } from '@styled-icons/ionicons-solid/Desktop'
+import { Rocket } from '@styled-icons/ionicons-solid/Rocket'
+import InfoCard from 'components/InfoCard'
+import * as S from './styles'
 
 export type ProjectPageProps = {
   image: string
@@ -40,7 +41,7 @@ const ProjectPage = ({
           )}
         </S.Buttons>
         <S.Technologies>
-          <InfoCard title="Tecnologias" icon={<Document />} items={items} />
+          <InfoCard title="Tecnologias" icon={<Rocket />} items={items} />
         </S.Technologies>
       </S.LeftContent>
       <S.RightContent>

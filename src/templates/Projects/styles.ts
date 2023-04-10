@@ -157,7 +157,7 @@ export const Button = styled.div`
     color: ${theme.colors.white};
     text-transform: uppercase;
     font-weight: 600;
-    background-image: url('/img/background-interativo.gif');
+    background-image: ${theme.gradients.top.blueBg};
     border: 0.3rem solid ${theme.colors.primary};
     cursor: pointer;
     transition: letter-spacing 0.4s;

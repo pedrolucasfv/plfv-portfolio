@@ -1,9 +1,9 @@
+import { Close as CloseIcon } from '@styled-icons/ionicons-solid/Close'
+import { Menu as MenuIcon } from '@styled-icons/ionicons-solid/Menu'
 import MediaMatch from 'components/MediaMatch'
 import { useState } from 'react'
-import * as S from './styles'
-import { Menu as MenuIcon } from '@styled-icons/ionicons-solid/Menu'
-import { Close as CloseIcon } from '@styled-icons/ionicons-solid/Close'
 import { Link } from 'react-scroll'
+import * as S from './styles'
 
 const Menu = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
@@ -30,7 +30,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>HOME</S.MenuLink>
+            <S.MenuLink>ÍNICIO</S.MenuLink>
           </Link>
           <Link
             to="aboutme"
@@ -39,7 +39,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>ABOUT ME</S.MenuLink>
+            <S.MenuLink>SOBRE MIM</S.MenuLink>
           </Link>
           <Link
             to="projects"
@@ -48,7 +48,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>PROJECTS</S.MenuLink>
+            <S.MenuLink>PROJETOS</S.MenuLink>
           </Link>
         </S.MenuNav>
       </MediaMatch>
@@ -68,7 +68,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink onClick={() => setIsOpenMenu(false)}>HOME</S.MenuLink>
+            <S.MenuLink onClick={() => setIsOpenMenu(false)}>ÍNICIO</S.MenuLink>
           </Link>
           <Link
             to="aboutme"
@@ -78,7 +78,7 @@ const Menu = () => {
             duration={500}
           >
             <S.MenuLink onClick={() => setIsOpenMenu(false)}>
-              ABOUT ME
+              SOBRE MIM
             </S.MenuLink>
           </Link>
           <Link
@@ -89,7 +89,7 @@ const Menu = () => {
             duration={500}
           >
             <S.MenuLink onClick={() => setIsOpenMenu(false)}>
-              PROJECTS
+              PROJETOS
             </S.MenuLink>
           </Link>
         </S.MenuNav>

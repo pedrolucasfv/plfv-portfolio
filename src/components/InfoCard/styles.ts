@@ -77,7 +77,8 @@ export const Button = styled.a`
     color: ${theme.colors.white};
     text-transform: uppercase;
     font-weight: 600;
-    background-image: url('/img/background-interativo.gif');
+    background-image: ${theme.gradients.top.blueBg};
+
     border: 0.2rem solid ${theme.colors.primary};
     cursor: pointer;
     transition: letter-spacing 0.4s;
