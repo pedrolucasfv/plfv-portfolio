@@ -97,9 +97,10 @@ const AboutMe = () => {
             <S.Text>
               Confiram detalhes dos meus projetos no Notion, onde documento tudo
               sobre eles como problemas que encontrei, divisão de tasks e como
-              eu guardo informação para eu lembrar nos próximos projetos. Vejam
-              meus códigos no github para entender minha maneira de pensar, e se
-              conectem a mim no linkedIn para acompanharem minha jornada.
+              eu guardo informação para eu lembrar nos próximos projetos. Ao
+              clicar em um dos cards de projeto, você visualiza detalhes dele,
+              recomendo visualizarem a audiophile e-commerce, meu melhor
+              projeto.
               <span> Um forte abraço!</span>
             </S.Text>
           </S.RightContent>
