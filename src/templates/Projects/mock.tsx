@@ -5,7 +5,8 @@ export default [
       description:
         'Audiophile é uma e-commerce com páginas dinâmicas, testes unitários, hooks personalizados, componentes bem escaláveis e tudo bem documentado.',
       name: 'Audiophile e-Commerce',
-      image: '/img/audiophile-print.png'
+      image: '/img/audiophile-print.png',
+      type: 'Melhor Projeto'
     },
     project: {
       notion:
@@ -42,11 +43,13 @@ export default [
       image: '/img/audiophile-print.png',
       items: [
         'Typescript, React',
-        'NextJS: que me ajudou muito nas rotas',
+        'NextJS: que me ajudou muito nas rotas e a carregar as páginas de forma estática',
+        'NodeJs: utilizei através do NextJs para fazer um sistema onde o admin da página possa adicionar produtos a loja',
         'Jest e react-testing-library: usei para fazer os testes unitários',
         'Storybook: usei para fazer os componentes separadamente',
         'Styled-components: usei bastante para criar opções para mudança nos componentes, aumentando a escalabilidade',
-        'Context-Api: usei para deixar a informação de carrinho global'
+        'Context-Api: usei para deixar a informação de carrinho global',
+        'StripeJs e NextAuth: Usei para fazer a autenticação e o fluxo de pagamento'
       ]
     }
   },
@@ -56,7 +59,8 @@ export default [
       description:
         'Esse foi um projeto social que decidi fazer para ajudar alguma instituição de caridade a aumentar o número de doaçõeos',
       name: 'Projeto A Rede',
-      image: '/img/projetoarede-print.png'
+      image: '/img/projetoarede-print.png',
+      type: 'Freelance'
     },
     project: {
       deploy: 'https://www.projetoarede.com.br/',
@@ -102,7 +106,8 @@ export default [
       description:
         'Projeto feito para aumentar o alcance de uma empresa que reboca veículos.',
       name: 'RF-Reboque',
-      image: '/img/rfreboque-print.png'
+      image: '/img/rfreboque-print.png',
+      type: 'Freelance'
     },
     project: {
       deploy: 'https://www.rfreboque.com.br/',
@@ -296,7 +301,8 @@ export default [
       description:
         'Esse é um projeto de consulta a informação de países através de uma rest api.',
       name: 'Rest Countries Api',
-      image: '/img/restcountriesapi-print.png'
+      image: '/img/restcountriesapi-print.png',
+      type: 'Refatorado'
     },
     project: {
       notion:
@@ -450,7 +456,8 @@ export default [
       description:
         'Projeto que ganhou o primeiro lugar na hackathon SEnC 2020, feito por mim e mais quatro alunos.',
       name: 'Pinça-me',
-      image: '/img/pincame-print.png'
+      image: '/img/pincame-print.png',
+      type: 'Hackathon'
     },
     project: {
       deploy: 'https://www.linkedin.com/feed/',
