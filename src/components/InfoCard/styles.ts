@@ -88,7 +88,7 @@ export const Button = styled.a`
     &:hover {
       font-weight: ${theme.font.bold};
       color: ${theme.colors.white};
-      letter-spacing: 1rem;
+      letter-spacing: 0.65rem;
     }
   `}
 `

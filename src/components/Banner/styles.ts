@@ -115,7 +115,7 @@ export const Glass = styled.div`
     );
     ${media.lessThan('medium')`
     border-bottom: 0.1rem solid ${theme.colors.primary}
-  `}
+    `}
     z-index: -5;
   `}
 `

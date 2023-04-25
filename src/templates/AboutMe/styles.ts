@@ -3,6 +3,10 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main``
 
+export const Container = styled.div`
+  margin-top: -1rem;
+`
+
 export const Image = styled.div`
   ${({ theme }) => css`
     background: url('/img/me.jpg');
@@ -61,8 +65,8 @@ export const Text = styled.h5`
     `}
 
     span {
-      color: ${theme.colors.secondary};
-      font-size: ${theme.font.sizes.xxlarge};
+      color: ${theme.colors.black};
+      font-size: ${theme.font.sizes.xlarge};
       letter-spacing: 0.1rem;
       ${media.lessThan('medium')`
     font-size: ${theme.font.sizes.xlarge};

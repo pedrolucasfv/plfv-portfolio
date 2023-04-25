@@ -1,23 +1,18 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   position: relative;
-  display: grid;
   margin-top: 13rem;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 4fr;
-
-  ${({ theme }) => css`
-    border-top: solid ${theme.colors.primary} 0.6rem;
-  `}
 `
 
 export const Glass = styled.div`
   position: absolute;
-  top: 0.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
-  bottom: 4.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
   background: linear-gradient(
     45deg,
     #fff,
@@ -27,42 +22,37 @@ export const Glass = styled.div`
     rgba(4, 77, 104, 0.5) 85%,
     #fff
   );
-  -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
-  clip-path: polygon(50% 30%, 0 0, 100% 0);
-`
-
-export const Background = styled.div`
-  position: absolute;
-  top: 0.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
-  bottom: 4.5rem;
-  background: url('/img/background-interativo.gif');
-  background-position: 85rem;
-  background-size: 120rem 96rem;
-  z-index: -2;
-  -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
-  clip-path: polygon(50% 30%, 0 0, 100% 0);
-`
-
-export const BorderWindow = styled.div`
-  ${({ theme }) => css`
-    position: relative;
-    width: 30rem;
-    height: 40rem;
-    background: ${theme.colors.primary};
-    z-index: -3;
-    -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
-    clip-path: polygon(50% 30%, 0 0, 100% 0);
-    overflow: hidden;
-  `}
 `
 export const Window = styled.div`
-  grid-row: 1;
-  grid-column: 1/3;
-  display: flex;
-  justify-content: center;
-  height: 20rem;
+  ${({ theme }) => css`
+    display: grid;
+    height: 15rem;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+    border-top: 0.4rem solid ${theme.colors.primary};
+    clip-path: polygon(
+      50% 50%,
+      70% 0,
+      100% 0,
+      100% 70%,
+      100% 100%,
+      0 100%,
+      0 0,
+      30% 0
+    );
+    ${media.greaterThan('medium')`
+  clip-path: polygon(
+    50% 50%,
+    60% 0,
+    100% 0,
+    100% 70%,
+    100% 100%,
+    0 100%,
+    0 0,
+    40% 0
+  );
+  `}
+  `}
 `
 export const LeftContent = styled.div`
   ${({ theme }) => css`
@@ -79,5 +69,38 @@ export const RightContent = styled.div`
     grid-row: 1;
     grid-column: 2;
     z-index: -5;
+  `}
+`
+export const BorderGlass = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    background: ${theme.colors.primary};
+    clip-path: polygon(
+      50% 46%,
+      68% 0,
+      100% 0,
+      100% 70%,
+      100% 100%,
+      0 100%,
+      0 0,
+      32% 0
+    );
+    ${media.greaterThan('medium')`
+    clip-path: polygon(
+      50% 46%,
+      59% 0,
+      100% 0,
+      100% 70%,
+      100% 100%,
+      0 100%,
+      0 0,
+      41% 0
+    );
+`}
   `}
 `

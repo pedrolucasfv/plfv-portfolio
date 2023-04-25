@@ -103,7 +103,7 @@ export const MenuLink = styled.div`
     &:hover {
       font-weight: 800;
       color: ${theme.colors.white};
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.4rem;
     }
   `}
 `

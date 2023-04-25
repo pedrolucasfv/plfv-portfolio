@@ -2,13 +2,27 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
+  margin-top: 10rem;
+  position: relative;
+`
+
+export const Container = styled.div`
   ${({ theme }) => css`
-    margin-top: 10rem;
     background: ${theme.gradients.top.darkBg};
+    clip-path: polygon(
+      50% 10%,
+      65% 0,
+      100% 0,
+      100% 70%,
+      100% 100%,
+      0 100%,
+      0 0,
+      35% 0
+    );
+    ${media.greaterThan('medium')`
+    clip-path: polygon(50% 20%, 58% 0, 100% 0, 100% 70%, 100% 100%, 0 100%, 0 0, 42% 0);
+    `}
     border-top: 0.5rem solid ${theme.colors.primary};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   `}
 `
 
@@ -136,42 +150,13 @@ export const Text = styled.h4`
   `}
 `
 
-export const Background = styled.div`
-  position: absolute;
-  top: 0;
-  left: 2rem;
-  right: 2rem;
-  bottom: 2rem;
-  background: url('/img/background-interativo.gif');
-  background-position: 85rem;
-  background-size: 120rem 96rem;
-  z-index: -2;
-  -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
-  clip-path: polygon(50% 30%, 0 0, 100% 0);
-`
-export const BorderWindow = styled.div`
-  ${({ theme }) => css`
-    width: 20rem;
-    height: 20rem;
-    background: ${theme.colors.primary};
-    background-position: center;
-    background-size: cover;
-    z-index: -3;
-    -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
-    clip-path: polygon(50% 30%, 0 0, 100% 0);
-  `}
-`
-
-export const Window = styled.div`
-  position: absolute;
-  height: 20rem;
-`
 export const Glass = styled.div`
   position: absolute;
   top: 0;
-  left: 2rem;
-  right: 2rem;
-  bottom: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
   background: linear-gradient(
     45deg,
     #fff,
@@ -181,8 +166,6 @@ export const Glass = styled.div`
     rgba(4, 77, 104, 0.5) 85%,
     #fff
   );
-  -webkit-clip-path: polygon(50% 30%, 0 0, 100% 0);
-  clip-path: polygon(50% 30%, 0 0, 100% 0);
 `
 export const GlassContact = styled.div`
   position: absolute;
@@ -200,4 +183,30 @@ export const GlassContact = styled.div`
     #fff
   );
   z-index: 0;
+`
+
+export const BorderGlass = styled.div`
+  ${({ theme }) => css`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: ${theme.colors.primary};
+    clip-path: polygon(
+      50% 9%,
+      63% 0,
+      100% 0,
+      100% 70%,
+      100% 100%,
+      0 100%,
+      0 0,
+      37% 0
+    );
+    ${media.greaterThan('medium')`
+    clip-path: polygon(50% 18.5%, 57.5% 0, 100% 0, 100% 70%, 100% 100%, 0 100%, 0 0, 42.5% 0);
+
+`}
+  `}
 `

@@ -47,65 +47,68 @@ const AboutMe = () => {
   return (
     <S.Wrapper>
       <Divider />
-      <PageSection title="Sobre mim">
-        <S.Content>
-          <S.LeftContent>
-            <S.Card>
-              <InfoCard {...formationInfoCard} />
-            </S.Card>
-            <S.Card>
-              <InfoCard {...skillsCard} />
-            </S.Card>
-            <S.Card>
-              <InfoCard {...Resume} />
-            </S.Card>
-            <S.Card>
-              <InfoCard {...Notion} />
-            </S.Card>
-          </S.LeftContent>
-          <S.RightContent>
-            <S.Image />
-            <S.Text>
-              Olá, meu nome é <span> Pedro Lucas Ferreira Vieira</span>, nasci
-              em 1996 e sou apaixonado por códigos. Conheci o mundo da
-              programação quando entrei na faculdade, até então eu não sabia o
-              que era programar iniciei o curso de engenharia de produção e me
-              facinei quando fiz meu primeiro programa em C no ciclo básico. Me
-              identifiquei com esse mundo e então no 5º período eu decidi mudar
-              para Engenharia da computação para ter um contato maior com a
-              área.
-            </S.Text>
-            <S.Text>
-              Quando mudei de curso, eu me inscrevi no time de robótica
-              <span> Locobots </span>
-              da universidade, onde tive um enorme crescimento, trabalhando em
-              equipe, fazendo projetos de programação e eletrônica, e também
-              fazendo projetos sociais como o robótica sustentável. Até montamos
-              uma equipe para a Hackathon SEnC 2020 (USP), feito na pandemia, e
-              ficamos em primeiro lugar com o projeto Pinça-me.
-            </S.Text>
-            <S.Text>
-              Até que chegou o momento em que decidi não seguir com a eletrônica
-              e focar exclusivamente em ser Dev. Comecei a estudar as linguagens
-              e frameworks de front end e entrei na <span>comunidade CoDe</span>
-              , onde aprendi a pensar como um dev, melhorar o ambiente para
-              desenvolver, ter um melhor mind-set e ser mais organizado. Desde
-              então passei a fazer projetos para desenvolver minhas habilidades
-              e popular meu portfólio, para mostrar meu conhecimento para o
-              mercado e ter um histórico da minha trajetória.
-            </S.Text>
-            <S.Text>
-              Confiram detalhes dos meus projetos no Notion, onde documento tudo
-              sobre eles como problemas que encontrei, divisão de tasks e como
-              eu guardo informação para eu lembrar nos próximos projetos. Ao
-              clicar em um dos cards de projeto, você visualiza detalhes dele,
-              recomendo visualizarem a audiophile e-commerce, meu melhor
-              projeto.
-              <span> Um forte abraço!</span>
-            </S.Text>
-          </S.RightContent>
-        </S.Content>
-      </PageSection>
+      <S.Container>
+        <PageSection title="Sobre mim">
+          <S.Content>
+            <S.LeftContent>
+              <S.Card>
+                <InfoCard {...formationInfoCard} />
+              </S.Card>
+              <S.Card>
+                <InfoCard {...skillsCard} />
+              </S.Card>
+              <S.Card>
+                <InfoCard {...Resume} />
+              </S.Card>
+              <S.Card>
+                <InfoCard {...Notion} />
+              </S.Card>
+            </S.LeftContent>
+            <S.RightContent>
+              <S.Image />
+              <S.Text>
+                Olá, meu nome é <span> Pedro Lucas Ferreira Vieira</span>, nasci
+                em 1996 e sou apaixonado por códigos. Conheci o mundo da
+                programação quando entrei na faculdade, até então eu não sabia o
+                que era programar iniciei o curso de engenharia de produção e me
+                facinei quando fiz meu primeiro programa em C no ciclo básico.
+                Me identifiquei com esse mundo e então no 5º período eu decidi
+                mudar para Engenharia da computação para ter um contato maior
+                com a área.
+              </S.Text>
+              <S.Text>
+                Quando mudei de curso, eu me inscrevi no time de robótica
+                <span> Locobots </span>
+                da universidade, onde tive um enorme crescimento, trabalhando em
+                equipe, fazendo projetos de programação e eletrônica, e também
+                fazendo projetos sociais como o robótica sustentável. Até
+                montamos uma equipe para a Hackathon SEnC 2020 (USP), feito na
+                pandemia, e ficamos em primeiro lugar com o projeto Pinça-me.
+              </S.Text>
+              <S.Text>
+                Até que chegou o momento em que decidi não seguir com a
+                eletrônica e focar exclusivamente em ser Dev. Comecei a estudar
+                as linguagens e frameworks de front end e entrei na{' '}
+                <span>comunidade CoDe</span>, onde aprendi a pensar como um dev,
+                melhorar o ambiente para desenvolver, ter um melhor mind-set e
+                ser mais organizado. Desde então passei a fazer projetos para
+                desenvolver minhas habilidades e popular meu portfólio, para
+                mostrar meu conhecimento para o mercado e ter um histórico da
+                minha trajetória.
+              </S.Text>
+              <S.Text>
+                Confiram detalhes dos meus projetos no Notion, onde documento
+                tudo sobre eles como problemas que encontrei, divisão de tasks e
+                como eu guardo informação para eu lembrar nos próximos projetos.
+                Ao clicar em um dos cards de projeto, você visualiza detalhes
+                dele, recomendo visualizarem a audiophile e-commerce, meu melhor
+                projeto.
+                <span> Um forte abraço!</span>
+              </S.Text>
+            </S.RightContent>
+          </S.Content>
+        </PageSection>
+      </S.Container>
     </S.Wrapper>
   )
 }

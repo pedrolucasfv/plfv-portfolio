@@ -7,6 +7,9 @@ export const Wrapper = styled.main`
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 4fr;
     border-bottom: 0.5rem solid ${theme.colors.primary};
+    ${media.lessThan('medium')`
+    margin-top: -1rem;
+    `}
   `}
 `
 export const LeftContent = styled.div`
