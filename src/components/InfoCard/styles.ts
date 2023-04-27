@@ -8,12 +8,10 @@ type AnimationProps = {
 
 export const Wrapper = styled.main<AnimationProps>`
   ${({ theme, animate, stopAnimation }) => css`
-    width: 35rem;
-    ${media.lessThan('medium')`
     width: 30rem;
-  `}
-    transform: ${animate ? 'translateX(0)' : 'translateX(-400px)'};
+
     transition: ${!stopAnimation && 'transform 1.5s'};
+    transform: ${animate ? 'translateX(0)' : 'translateX(-200px)'};
 
     background: ${theme.gradients.top.darkBg};
     color: white;
@@ -21,6 +19,10 @@ export const Wrapper = styled.main<AnimationProps>`
     border: solid 0.3rem ${theme.colors.primary};
     border-radius: 0.8rem;
     box-shadow: 0.5rem 0.5rem 0.6rem rgb(0 0 0 / 30%);
+    ${media.greaterThan('medium')`
+    width: 35rem;
+    transform: ${animate ? 'translateX(0)' : 'translateX(-400px)'};
+    `}
     @media (min-width: 1500px) {
       width: 40rem;
       transform: ${animate ? 'translateX(0)' : 'translateX(-600px)'};
