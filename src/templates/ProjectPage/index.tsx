@@ -27,21 +27,37 @@ const ProjectPage = ({
       <S.LeftContent>
         <S.Buttons>
           {deploy && (
-            <InfoCard titleButton="Deploy" icon={<Desktop />} link={deploy} />
+            <InfoCard
+              title="Deploy"
+              icon={<Desktop />}
+              link={deploy}
+              stopAnimation
+            />
           )}
           {notion && (
-            <InfoCard titleButton="Notion" icon={<Document />} link={notion} />
+            <InfoCard
+              title="NotioN"
+              icon={<Document />}
+              link={notion}
+              stopAnimation
+            />
           )}
           {github && (
             <InfoCard
-              titleButton="Github"
+              title="Github"
               icon={<LogoGithub />}
               link={github}
+              stopAnimation
             />
           )}
         </S.Buttons>
         <S.Technologies>
-          <InfoCard title="Tecnologias" icon={<Rocket />} items={items} />
+          <InfoCard
+            title="Tecnologias"
+            icon={<Rocket />}
+            items={items}
+            stopAnimation
+          />
         </S.Technologies>
       </S.LeftContent>
       <S.RightContent>

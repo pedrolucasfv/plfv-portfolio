@@ -1,22 +1,30 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.main`
-  ${({ theme }) => css`
+type AnimationProps = {
+  animate: boolean
+  stopAnimation: boolean
+}
+
+export const Wrapper = styled.main<AnimationProps>`
+  ${({ theme, animate, stopAnimation }) => css`
     width: 35rem;
-    @media (min-width: 1500px) {
-      width: 40rem;
-    }
     ${media.lessThan('medium')`
     width: 30rem;
-
   `}
+    transform: ${animate ? 'translateX(0)' : 'translateX(-400px)'};
+    transition: ${!stopAnimation && 'transform 1.5s'};
+
     background: ${theme.gradients.top.darkBg};
     color: white;
     display: grid;
     border: solid 0.3rem ${theme.colors.primary};
     border-radius: 0.8rem;
     box-shadow: 0.5rem 0.5rem 0.6rem rgb(0 0 0 / 30%);
+    @media (min-width: 1500px) {
+      width: 40rem;
+      transform: ${animate ? 'translateX(0)' : 'translateX(-600px)'};
+    }
   `}
 `
 export const Content = styled.div`
@@ -70,6 +78,7 @@ export const Button = styled.a`
   ${({ theme }) => css`
     text-decoration: none;
     padding: 1rem 4rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
