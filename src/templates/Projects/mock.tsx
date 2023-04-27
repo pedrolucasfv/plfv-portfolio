@@ -60,6 +60,60 @@ export default [
   },
   {
     projectCard: {
+      slug: 'https://audiophile-ecommerce-ols5.vercel.app/',
+      description:
+        'Um site para um escritório de advocacia focado em mobile estilizado com Tailwind',
+      name: 'Rangel Martins Adv',
+      image: '/img/rangelmartins-print.png',
+      type: 'Freelance' as
+        | 'none'
+        | 'Melhor Projeto'
+        | 'Freelance'
+        | 'Refatorado'
+        | 'Hackathon'
+    },
+    project: {
+      deploy: 'https://www.rangelmartinsadvocacia.com.br/',
+      github: 'https://github.com/pedrolucasfv/rangel-martins-advocacia',
+      description: (
+        <text>
+          <p>
+            Este projeto foi desenvolvido para atender a demanda de um
+            escritório de advocacia que buscava melhorar seu site, tornando-o
+            mais moderno e atraente para os clientes. O objetivo era criar um
+            site clean e elegante, que representasse a seriedade do meio
+            jurídico, mas que ao mesmo tempo tivesse animações sutis para chamar
+            a atenção do usuário. O foco era na versão mobile, mas fiz
+            adaptações para o site não quebrar em telas maiores.
+          </p>
+          <p>
+            Como o projeto não tinha uma complexidade tão grande, resolvi me
+            desafiar e implementar utilizando outra tecnologia de estilização.
+            Ao longo da minha jornada como dev, tenho estilizado os meus
+            projetos utilizando o Styled-Components, mas dessa vez eu utilizei o
+            Tailwind, que já vinha na pré-instalação de um projeto NextJs.
+          </p>
+          <p>
+            Aprendi bastante como usar o Tailwind, achei uma maneira bem prática
+            e fácil para estilizar o projeto. Também tem o fato da padronização,
+            você usa espaçamentos e cores padrões do tailwind que podem deixar
+            seu projeto mais bonito. Ainda ficarei com Styled-Components, mas em
+            alguns projetos em que não vou ter muito tempo pra estilizar, com
+            certeza o Tailwind estará nas minhas possibilidades.
+          </p>
+        </text>
+      ),
+      name: 'Rangel Martins Advocacia',
+      image: '/img/rangelmartins-print.png',
+      items: [
+        'Typescript, React',
+        'NextJS: que me ajudou nas rotas',
+        'Tailwind: me ajudou a estilizar os componentes e pages de forma rápida e padronizada'
+      ]
+    }
+  },
+  {
+    projectCard: {
       slug: 'https://pedrolucasfv.github.io/',
       description:
         'Esse foi um projeto social que decidi fazer para ajudar alguma instituição de caridade a aumentar o número de doaçõeos',
