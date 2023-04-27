@@ -56,24 +56,6 @@ export const Description = styled.h3`
   `}
   `}
 `
-export const Text = styled.h3`
-  ${({ theme }) => css`
-    margin-top: 6rem;
-    font-size: 9rem;
-    margin-left: ${theme.spacings.xsmall};
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.2rem ${theme.colors.white};
-    background-image: ${theme.gradients.top.blueBg};
-    @media (min-width: 1500px) {
-      font-size: 12rem;
-      margin-top: 10rem;
-    }
-    ${media.lessThan('medium')`
-    opacity: 0;
-  `}
-  `}
-`
 
 export const Content = styled.div`
   ${({ theme }) => css`
@@ -131,5 +113,52 @@ export const BorderContent = styled.div`
     background: ${theme.colors.primary};
     -webkit-clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
     clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
+  `}
+`
+type OpenProps = {
+  isOpen: boolean
+}
+
+export const Text = styled.div<OpenProps>`
+  ${({ theme, isOpen }) => css`
+    margin-top: 15rem;
+    margin-left: 1.2rem;
+    cursor: pointer;
+    @media (min-width: 1500px) {
+      font-size: 12rem;
+      margin-top: 10rem;
+    }
+    ${media.lessThan('medium')`
+    opacity: 0;
+  `}
+    font-weight: 700;
+    max-width: 100rem;
+    text-transform: uppercase;
+    font-size: 5rem;
+    ${media.greaterThan('medium')`
+    font-size: 11rem;
+    margin-bottom: 5rem;
+    `}
+    span {
+      position: absolute;
+      color: #fff;
+      transform: translate(-50%, -50%);
+    }
+    span:nth-child(1) {
+      color: ${theme.colors.darkGray};
+      -webkit-text-stroke: 0.1rem white;
+    }
+    span:nth-child(2) {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: url('/img/background-interativo.gif');
+      background-size: 80rem 80rem;
+      background-position: center;
+      -webkit-text-stroke: 1px white;
+      clip-path: ${isOpen
+        ? 'polygon(0 0%, 100% 0%, 100% 100%, 0 100%)'
+        : 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'};
+      transition: clip-path 2s;
+    }
   `}
 `
