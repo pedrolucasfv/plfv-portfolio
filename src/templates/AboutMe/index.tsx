@@ -11,31 +11,50 @@ import Text from 'components/Text'
 const AboutMe = () => {
   const formationInfoCard = {
     icon: <Book size={20} />,
-    title: 'Formação',
+    title: 'Education',
     items: [
-      'Cursando: Engenharia de Computação - Universidade Federal de Ouro Preto - João Monlevade - Minas Gerais',
-      'Curso: React Avançado: Crie aplicações com NextJS, Strapi e mais',
-      'Mentorado da comunidade CoDe'
+      'Computer Engineering - Federal University of Ouro Preto - Brazil (Incomplete)',
+      'Course: Advanced React: Build applications with NextJS, Strapi, and more',
+      'Mentee at the CoDe community'
     ]
   }
+
+  const experienceInfoCard = {
+    icon: <Book size={20} />,
+    title: 'Experience',
+    description:
+      'Full stack developer at EvoluServices Meios de Pagamentos - (May 2023 - Present)',
+    items: [
+      'Responsible for implementing new features and fixing bugs in customer service system.',
+      'Responsible for the frontend and backend using NodeJS and ReactJs.',
+      'Developed plugins and applications using the Twilio ecosystem.',
+      'Managed cloud infrastructure using AWS services such as Lambda, SQS, SNS, and S3.',
+      'Collaborated on tasks using Git, Gerrit, Jira, and Notion to ensure smooth team operations.',
+      'Built and integrated AI assistents to increase productivity and streamline internal processes.'
+    ]
+  }
+
   const skillsCard = {
     icon: <Rocket size={20} />,
-    title: 'Conhecimentos',
+    title: 'Knowledge',
     items: [
       'Typescript, Javascript, Html, Css',
       'ReactJS, NextJs',
-      'Styled-Components',
+      'Styled-Components, Tailwild',
       'Storybook',
       'GraphQl, StrapiCMS',
       'NodeJS, Express',
-      'Experiência básica com Java, C, C# (Unity3D), React Native, Arduíno e afins '
+      'AWS (S3, Lambda, SQS, SNS, API Gateway, DynamoDB, DocumentDB)',
+      'Serverless Framework, SAM',
+      "Twilio (Flex, Conversations, TaskRouter, Studio, API's)",
+      'Basic experience with Java, C, C# (Unity3D), React Native, Arduíno and others (University)'
     ]
   }
   const Resume = {
     icon: <Download size={20} />,
-    title: 'Currículo',
+    title: 'Resume',
     titleButton: 'DOWNLOAD',
-    link: '/resume/Pedro_Lucas_FV_currículo.pdf',
+    link: '/resume/Pedro_Vieira_Resume_EN.pdf',
     download: true
   }
   const Notion = {
@@ -50,11 +69,14 @@ const AboutMe = () => {
     <S.Wrapper>
       <Divider />
       <S.Container>
-        <PageSection title="Sobre mim">
+        <PageSection title="About me">
           <S.Content>
             <S.LeftContent>
               <S.Card>
                 <InfoCard {...formationInfoCard} />
+              </S.Card>
+              <S.Card>
+                <InfoCard {...experienceInfoCard} />
               </S.Card>
               <S.Card>
                 <InfoCard {...skillsCard} />
@@ -68,44 +90,73 @@ const AboutMe = () => {
             </S.LeftContent>
             <S.RightContent>
               <S.Image />
-              <Text id="text1">
-                Olá, meu nome é <span> Pedro Lucas Ferreira Vieira</span>, nasci
-                em 1996 e sou apaixonado por códigos. Conheci o mundo da
-                programação quando entrei na faculdade, até então eu não sabia o
-                que era programar iniciei o curso de engenharia de produção e me
-                facinei quando fiz meu primeiro programa em C no ciclo básico.
-                Me identifiquei com esse mundo e então no 5º período eu decidi
-                mudar para Engenharia da computação para ter um contato maior
-                com a área.
+              {/* <Text id="text1">
+                Hello, my name is <span>Pedro Lucas Ferreira Vieira</span>, born
+                in 1996. I discovered programming in college and quickly fell in
+                love with it, which led me to switch from Production Engineering
+                to Computer Engineering to dive deeper into this world.
               </Text>
               <Text id="text2">
-                Quando mudei de curso, eu me inscrevi no time de robótica
-                <span> Locobots </span>
-                da universidade, onde tive um enorme crescimento, trabalhando em
-                equipe, fazendo projetos de programação e eletrônica, e também
-                fazendo projetos sociais como o robótica sustentável. Até
-                montamos uma equipe para a Hackathon SEnC 2020 (USP), feito na
-                pandemia, e ficamos em primeiro lugar com o projeto Pinça-me.
+                I started by focusing on frontend development, building several
+                projects to sharpen my skills and create a strong portfolio.
+                Over time, I also worked on freelance jobs and social
+                initiatives like <span>Projeto A Rede</span>.
               </Text>
               <Text id="text3">
-                Até que chegou o momento em que decidi não seguir com a
-                eletrônica e focar exclusivamente em ser Dev. Comecei a estudar
-                as linguagens e frameworks de front end e entrei na{' '}
-                <span>comunidade CoDe</span>, onde aprendi a pensar como um dev,
-                melhorar o ambiente para desenvolver, ter um melhor mind-set e
-                ser mais organizado. Desde então passei a fazer projetos para
-                desenvolver minhas habilidades e popular meu portfólio, para
-                mostrar meu conhecimento para o mercado e ter um histórico da
-                minha trajetória.
+                My career took a big step forward when I joined{' '}
+                <span>EvoluServices</span> in 2023. Although I began as a frontend
+                trainee, I quickly grew into a full-stack role, learning backend
+                and cloud. There, I developed Twilio Flex plugins, built AWS
+                microservices, created AI assistants, and even led the
+                implementation of customer segmentation, helping the team win
+                the <span>XXIV Prêmio ABT</span>, the most important
+                customer relationship award in Brazil.
               </Text>
               <Text id="text4">
-                Confiram detalhes dos meus projetos no Notion, onde documento
-                tudo sobre eles como problemas que encontrei, divisão de tasks e
-                como eu guardo informação para eu lembrar nos próximos projetos.
-                Ao clicar em um dos cards de projeto, você visualiza detalhes
-                dele, recomendo visualizarem a audiophile e-commerce, meu melhor
-                projeto.
-                <span> Um forte abraço!</span>
+                Today I see myself as a passionate full-stack developer, always
+                eager to learn and share knowledge. Check out my projects for
+                more details about my journey!
+              </Text> */}
+              <Text id="text1">
+                Hello, my name is <span>Pedro Lucas Ferreira Vieira</span>, born
+                in 1996. I discovered programming during college and quickly
+                fell in love with it. At first, I studied Production
+                Engineering, but after writing my very first program in C, I
+                realized that technology was where I truly belonged. This led me
+                to switch to Computer Engineering so I could explore programming
+                in depth and build a solid foundation for my career.
+              </Text>
+              <Text id="text2">
+                I started by dedicating myself to frontend development, creating
+                multiple projects that allowed me to improve my technical
+                skills, learn best practices, and start shaping a professional
+                portfolio. Along the way, I also worked on freelance projects
+                and contributed to social initiatives such as
+                <span> Projeto A Rede</span>, which gave me the opportunity to
+                apply my knowledge while making a positive impact.
+              </Text>
+              <Text id="text3">
+                My career reached a turning point when I joined{' '}
+                <span>EvoluServices</span>. Although I initially entered as a
+                frontend trainee, I quickly evolved into a full-stack role by
+                learning backend and cloud technologies. During this time, I
+                developed Twilio Flex plugins, built AWS microservices, designed
+                event-driven architectures, and created AI assistants to
+                optimize workflows. I also led the implementation of customer
+                segmentation, a project that helped the company deliver
+                personalized service to key clients. These contributions played
+                a role in the team receiving the prestigious
+                <span> XXIV Prêmio ABT</span>, the most important recognition
+                for customer relationship in Brazil.
+              </Text>
+              <Text id="text4">
+                Today, I see myself as a passionate full-stack developer with a
+                strong drive for continuous learning, problem-solving, and
+                collaboration. I enjoy sharing knowledge with teammates,
+                mentoring new developers, and exploring innovative ways to use
+                technology to solve real-world problems. Feel free to explore my
+                projects to see in detail how I’ve grown throughout my journey
+                and the impact I aim to create as a developer.
               </Text>
             </S.RightContent>
           </S.Content>

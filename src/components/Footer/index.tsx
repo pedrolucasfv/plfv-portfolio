@@ -32,7 +32,7 @@ const Footer = () => (
         <S.Copyright>
           <S.Text>© Pedro L. F. Vieira, 2023</S.Text>
           <S.Text>
-            Este portfólio foi inspirado no{' '}
+            This portfolio was inspired by{' '}
             <a href="https://www.jfcwebdesign.com/">James Ciskanik</a>
           </S.Text>
         </S.Copyright>

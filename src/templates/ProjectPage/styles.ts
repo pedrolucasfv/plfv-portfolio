@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
-import { Wrapper as InfoCardWrapper } from 'components/InfoCard/styles'
+import { Wrapper as InfoCardStaticWrapper } from 'components/InfoCardStatic/styles'
 export const Wrapper = styled.main`
   ${media.greaterThan('medium')`
    width: 75%;
@@ -23,16 +23,23 @@ export const Image = styled.div<ImageProps>`
   ${({ src, theme }) => css`
     height: 20rem;
     width: 45rem;
-    background: url(${src});
+
+    /* Mostra a imagem inteira */
+    background-image: url(${src});
     background-position: center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain; /* <- antes estava cover */
+    background-color: #fff; /* cor de “letterbox” (opcional) */
+
     border: solid 0.5rem ${theme.colors.primary};
     border-radius: 0.8rem;
+
     ${media.greaterThan('medium')`
-    height: 30rem;
-    width: 50rem;
-    margin-left: 5rem;
+      height: 30rem;
+      width: 50rem;
+      margin-left: 5rem;
     `}
+
     @media (min-width: 1500px) {
       height: 40rem;
       width: 70rem;
@@ -45,13 +52,13 @@ export const Buttons = styled.div`
   ${media.greaterThan('medium')`
     margin-top: -8rem;
     `}
-  ${InfoCardWrapper} {
+  ${InfoCardStaticWrapper} {
     margin-bottom: 5rem;
     width: 30rem;
   }
 `
 export const Technologies = styled.div`
-  ${InfoCardWrapper} {
+  ${InfoCardStaticWrapper} {
     margin-bottom: 5rem;
     width: 30rem;
   }

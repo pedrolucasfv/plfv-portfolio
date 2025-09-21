@@ -9,6 +9,7 @@ export type InfoCardProps = {
   link?: string
   download?: boolean
   stopAnimation?: boolean
+  description?: string
 }
 
 const InfoCard = ({
@@ -17,7 +18,8 @@ const InfoCard = ({
   title,
   link = '/',
   download = false,
-  stopAnimation = false
+  stopAnimation = false,
+  description = ''
 }: InfoCardProps) => {
   const [animation, setAnimation] = useState(false)
   useEffect(() => {
@@ -50,6 +52,7 @@ const InfoCard = ({
         {items ? (
           <S.Items>
             <S.Title>{title}</S.Title>
+            <S.Description>{description}</S.Description>
             {items?.map((item, index) => (
               <S.Item key={index}>{item}</S.Item>
             ))}

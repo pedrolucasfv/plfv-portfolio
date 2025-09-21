@@ -30,7 +30,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>ÍNICIO</S.MenuLink>
+            <S.MenuLink>BEGIN</S.MenuLink>
           </Link>
           <Link
             to="aboutme"
@@ -39,7 +39,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>SOBRE MIM</S.MenuLink>
+            <S.MenuLink>ABOUT ME</S.MenuLink>
           </Link>
           <Link
             to="projects"
@@ -48,7 +48,7 @@ const Menu = () => {
             offset={-117}
             duration={500}
           >
-            <S.MenuLink>PROJETOS</S.MenuLink>
+            <S.MenuLink>PROJECTS</S.MenuLink>
           </Link>
         </S.MenuNav>
       </MediaMatch>

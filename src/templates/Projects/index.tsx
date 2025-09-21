@@ -102,7 +102,7 @@ const Projects = () => {
         id="containerProjects"
       >
         <Divider />
-        <PageSection title="Projetos">
+        <PageSection title="Projects">
           <S.Content>
             {projectsMock.map((project, index) => (
               <Link

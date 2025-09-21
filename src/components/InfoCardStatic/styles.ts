@@ -1,17 +1,9 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-type AnimationProps = {
-  animate: boolean
-  stopAnimation: boolean
-}
-
-export const Wrapper = styled.main<AnimationProps>`
-  ${({ theme, animate, stopAnimation }) => css`
+export const Wrapper = styled.main`
+  ${({ theme }) => css`
     width: 30rem;
-
-    transition: ${!stopAnimation && 'transform 1.5s'};
-    transform: ${animate ? 'translateX(0)' : 'translateX(-200px)'};
 
     background: ${theme.gradients.top.darkBg};
     color: white;
@@ -21,11 +13,10 @@ export const Wrapper = styled.main<AnimationProps>`
     box-shadow: 0.5rem 0.5rem 0.6rem rgb(0 0 0 / 30%);
     ${media.greaterThan('medium')`
     width: 35rem;
-    transform: ${animate ? 'translateX(0)' : 'translateX(-400px)'};
+
     `}
     @media (min-width: 1500px) {
       width: 40rem;
-      transform: ${animate ? 'translateX(0)' : 'translateX(-600px)'};
     }
   `}
 `
@@ -68,22 +59,11 @@ export const Title = styled.h3`
 
 export const Items = styled.div``
 
-export const Description = styled.span`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
-    color: ${theme.colors.primary};
-    margin: 1rem 0 2.3rem 0;
-    ${media.lessThan('medium')`
-    font-size: ${theme.font.sizes.small};
-  `}
-  `}
-`
-
 export const Item = styled.li`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     color: ${theme.colors.white};
-    margin: 1.7rem 1rem;
+    margin: 1.7rem 0;
   `}
 `
 

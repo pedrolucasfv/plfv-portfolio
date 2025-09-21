@@ -65,9 +65,6 @@ export const Content = styled.div`
     right: 0.7rem;
     bottom: 0.3rem;
     background: ${theme.gradients.top.darkBg};
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     -webkit-clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
     clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
   `}
@@ -115,15 +112,12 @@ export const BorderContent = styled.div`
     clip-path: polygon(0 0, 100% 0, 78% 100%, 23% 100%);
   `}
 `
-type OpenProps = {
-  isOpen: boolean
-}
 
-export const Text = styled.div<OpenProps>`
-  ${({ theme, isOpen }) => css`
+export const Text = styled.div`
+  ${({ theme }) => css`
     margin-top: 15rem;
     margin-left: 1.2rem;
-    cursor: pointer;
+    cursor: default;
     @media (min-width: 1500px) {
       font-size: 12rem;
       margin-top: 10rem;
@@ -138,6 +132,8 @@ export const Text = styled.div<OpenProps>`
     ${media.greaterThan('medium')`
     font-size: 11rem;
     margin-bottom: 5rem;
+    margin-top: 7rem;
+
     `}
     span {
       position: absolute;
@@ -155,9 +151,7 @@ export const Text = styled.div<OpenProps>`
       background-size: 80rem 80rem;
       background-position: center;
       -webkit-text-stroke: 1px white;
-      clip-path: ${isOpen
-        ? 'polygon(0 0%, 100% 0%, 100% 100%, 0 100%)'
-        : 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'};
+      clip-path: 'polygon(0 0%, 100% 0%, 100% 100%, 0 100%)';
       transition: clip-path 2s;
     }
   `}

@@ -21,7 +21,13 @@ export const Wrapper = styled.main`
   `}
 `
 type StatusProps = {
-  type: 'none' | 'Melhor Projeto' | 'Freelance' | 'Refatorado' | 'Hackathon'
+  type:
+    | 'none'
+    | 'Best Project'
+    | 'Freelance'
+    | 'Refactored'
+    | 'Hackathon'
+    | 'Social Project'
 }
 
 export const Status = styled.div<StatusProps>`
@@ -50,7 +56,7 @@ export const Status = styled.div<StatusProps>`
     css`
       border: none;
     `}
-    ${type == 'Melhor Projeto' &&
+    ${type == 'Best Project' &&
     css`
       border: 0.1rem solid ${theme.colors.primary};
       div {
@@ -64,7 +70,7 @@ export const Status = styled.div<StatusProps>`
         background-color: ${theme.colors.red};
       }
     `}
-    ${type == 'Refatorado' &&
+    ${type == 'Refactored' &&
     css`
       border: 0.1rem solid ${theme.colors.secondary};
       div {
@@ -76,6 +82,13 @@ export const Status = styled.div<StatusProps>`
       border: 0.1rem solid ${theme.colors.gray};
       div {
         background-color: ${theme.colors.gray};
+      }
+    `}
+    ${type == 'Social Project' &&
+    css`
+      border: 0.1rem solid ${theme.colors.white};
+      div {
+        background-color: ${theme.colors.white};
       }
     `}
   `}

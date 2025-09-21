@@ -5,7 +5,13 @@ export type ProjectCardProps = {
   image: string
   name: string
   description: string
-  type?: 'none' | 'Melhor Projeto' | 'Freelance' | 'Refatorado' | 'Hackathon'
+  type?:
+    | 'none'
+    | 'Best Project'
+    | 'Freelance'
+    | 'Refactored'
+    | 'Hackathon'
+    | 'Social Project'
 }
 
 const ProjectCard = ({

@@ -2,7 +2,7 @@ import { Desktop } from '@styled-icons/ionicons-solid/Desktop'
 import { Document } from '@styled-icons/ionicons-solid/Document'
 import { LogoGithub } from '@styled-icons/ionicons-solid/LogoGithub'
 import { Rocket } from '@styled-icons/ionicons-solid/Rocket'
-import InfoCard from 'components/InfoCard'
+import InfoCardStatic from 'components/InfoCardStatic'
 import * as S from './styles'
 
 export type ProjectPageProps = {
@@ -27,37 +27,21 @@ const ProjectPage = ({
       <S.LeftContent>
         <S.Buttons>
           {deploy && (
-            <InfoCard
-              title="Deploy"
-              icon={<Desktop />}
-              link={deploy}
-              stopAnimation
-            />
+            <InfoCardStatic title="Deploy" icon={<Desktop />} link={deploy} />
           )}
           {notion && (
-            <InfoCard
-              title="NotioN"
-              icon={<Document />}
-              link={notion}
-              stopAnimation
-            />
+            <InfoCardStatic title="NotioN" icon={<Document />} link={notion} />
           )}
           {github && (
-            <InfoCard
+            <InfoCardStatic
               title="Github"
               icon={<LogoGithub />}
               link={github}
-              stopAnimation
             />
           )}
         </S.Buttons>
         <S.Technologies>
-          <InfoCard
-            title="Tecnologias"
-            icon={<Rocket />}
-            items={items}
-            stopAnimation
-          />
+          <InfoCardStatic title="Tecnologias" icon={<Rocket />} items={items} />
         </S.Technologies>
       </S.LeftContent>
       <S.RightContent>
