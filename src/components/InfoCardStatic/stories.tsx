@@ -1,10 +1,10 @@
 import { Story, Meta } from '@storybook/react'
-import InfoCard, { InfoCardProps } from '.'
+import InfoCardStatic, { InfoCardStaticProps } from '.'
 import { Book } from '@styled-icons/ionicons-solid/Book'
 
 export default {
   title: 'InfoCard',
-  component: InfoCard,
+  component: InfoCardStatic,
   args: {
     icon: <Book size={20} />,
     title: 'education',
@@ -17,8 +17,8 @@ export default {
   }
 } as Meta
 
-export const Default: Story<InfoCardProps> = (args) => (
+export const Default: Story<InfoCardStaticProps> = (args) => (
   <div style={{ margin: '3rem 3rem' }}>
-    <InfoCard {...args} />
+    <InfoCardStatic {...args} />
   </div>
 )
